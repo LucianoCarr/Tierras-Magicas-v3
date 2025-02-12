@@ -1,0 +1,12 @@
+<div *ngIf="isVisible && realm" class="modal-overlay">
+  <div class="modal">
+    <h2 class="deleteRealm">Deseas eliminar?</h2>
+    <p class="deleteName">Reino {{ realm.name }}</p>
+    <img [src]="realm.image" [alt]="'imagen del reino '+ realm.name">
+    <div class="flex justify-around gap-4">
+      <button class="deleteConfirm" type="button" (click)="confirm()">Eliminar</button>
+      <button class="deleteCancel" type="button" (click)="close()">Cerrar</button>
+    </div>
+    
+  </div>
+</div>

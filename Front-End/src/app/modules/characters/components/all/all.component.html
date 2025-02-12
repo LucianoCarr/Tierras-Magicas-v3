@@ -1,0 +1,32 @@
+<h1 class="allCharacter">Vista de Personajes</h1>
+
+<nav class="navbar">
+    <h2 class="routes" [routerLink]="'/character/create'">Agregar Personaje</h2>
+    <h2 class="routes" [routerLink]="'/realm/create'">Agregar Reino</h2>
+    <h2 class="routes" [routerLink]="'/character/all'">Ver Personajes</h2>
+    <h2 class="routes" [routerLink]="'/realm/all'">Ver Reinos</h2>
+    <form class="header-form" id="form-search">
+      <div class="search">
+        <input type="text" name="keywords" id="search" placeholder="Buscar">
+        <button type="submit"><i class="fas fa-search"></i></button>
+      </div>
+    </form>
+    <h2 [routerLink]="'/realm/admin'">Usuario <i class="fa-solid fa-user"></i></h2>
+  </nav>
+  
+  <!-- LISTA DE REINOS -->
+  <div class="char-body">
+    <div class="char-card" *ngFor="let character of characters">
+      <h2 class="character-name">{{ character.name }}</h2>
+      <img class="character-image" [src]="character.image" [alt]="'Imagen de personaje ' + character.name">
+      <p class="character-power">Poder: {{ character.power }}</p>
+      <p class="character-element">Elemento: {{ character.elements?.name || 'Desconocido' }}</p>
+      <p class="character-realm">Reino: {{ character.realms?.name || 'Sin reino' }}</p>
+      <button class="button-custom">Descripción</button>
+     <!--  <button class="edit">Editar</button>
+      <button class="detail">Ver detalles</button>
+      <button class="delete">Eliminar</button> -->
+    </div>
+  </div>
+
+

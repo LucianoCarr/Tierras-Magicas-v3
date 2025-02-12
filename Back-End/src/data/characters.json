@@ -1,0 +1,1028 @@
+[
+  {
+    "id": 1,
+    "name": "Guerrero",
+    "realm": "de los Dragones",
+    "element": "Fuego",
+    "image": "1722181438848_image_.png",
+    "power": 17,
+    "description": "Guerrero entrenado para defender a su especie y reino. Suelen ser bastante calmados y siempre evaluan la situacion antes de actuar."
+  },
+  {
+    "id": 2,
+    "name": "Leyenda",
+    "realm": "de los Dragones",
+    "element": "Tierra",
+    "image": "1722181472836_image_.png",
+    "power": 26,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 3,
+    "name": "Bestia",
+    "realm": "de los Dragones",
+    "element": "Fuego",
+    "image": "1722181482054_image_.png",
+    "power": 19,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 4,
+    "name": "Guardian",
+    "realm": "de los Dragones",
+    "element": "Aire",
+    "image": "1722181489661_image_.png",
+    "power": 15,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 5,
+    "name": "Shaman",
+    "realm": "de los Dragones",
+    "element": "Agua",
+    "image": "1722181598270_image_.png",
+    "power": 16,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 6,
+    "name": "Oráculo",
+    "realm": "de los Dragones",
+    "element": "Agua",
+    "image": "1722181613220_image_.png",
+    "power": 20,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 7,
+    "name": "Guerrero",
+    "realm": "Felino",
+    "element": "Agua",
+    "image": "1722204123752_image_.png",
+    "power": 18,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 8,
+    "name": "Heroe",
+    "realm": "Felino",
+    "element": "Aire",
+    "image": "1722204141222_image_.png",
+    "power": 26,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 9,
+    "name": "Bestia",
+    "realm": "Felino",
+    "element": "Tierra",
+    "image": "1722204168263_image_.png",
+    "power": 20,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 10,
+    "name": "Explorador",
+    "realm": "Felino",
+    "element": "Agua",
+    "image": "1722204277944_image_.png",
+    "power": 18,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 11,
+    "name": "Hechicera",
+    "realm": "Felino",
+    "element": "Aire",
+    "image": "1722204301551_image_.png",
+    "power": 14,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 12,
+    "name": "Reina",
+    "realm": "Felino",
+    "element": "Fuego",
+    "image": "1722204522968_image_.png",
+    "power": 18,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 13,
+    "name": "Arquero",
+    "realm": "Elfo",
+    "element": "Aire",
+    "image": "1722195220286_image_.png",
+    "power": 15,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 14,
+    "name": "Escolta",
+    "realm": "Elfo",
+    "element": "Agua",
+    "image": "1722203287192_image_.png",
+    "power": 24,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 15,
+    "name": "Explorador",
+    "realm": "Elfo",
+    "element": "Aire",
+    "image": "1722195578642_image_.png",
+    "power": 16,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 16,
+    "name": "Guerrero",
+    "realm": "Elfo",
+    "element": "Tierra",
+    "image": "1722195593595_image_.png",
+    "power": 19,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 17,
+    "name": "Hechicera",
+    "realm": "Elfo",
+    "element": "Tierra",
+    "image": "1722195638394_image_.png",
+    "power": 17,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 18,
+    "name": "Reina",
+    "realm": "Elfo",
+    "element": "Fuego",
+    "image": "1722195648404_image_.png",
+    "power": 19,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 19,
+    "name": "Explorador",
+    "realm": "Humano",
+    "element": "Tierra",
+    "image": "1722272628176_image_.png",
+    "power": 16,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 20,
+    "name": "Heroe",
+    "realm": "Humano",
+    "element": "Fuego",
+    "image": "1722273392247_image_.png",
+    "power": 25,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 21,
+    "name": "Hechicera",
+    "realm": "Humano",
+    "element": "Tierra",
+    "image": "1722273473365_image_.png",
+    "power": 20,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 22,
+    "name": "Guardian",
+    "realm": "Humano",
+    "element": "Agua",
+    "image": "1722273615231_image_.png",
+    "power": 18,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 23,
+    "name": "Guerrero",
+    "realm": "Humano",
+    "element": "Fuego",
+    "image": "1722273582028_image_.png",
+    "power": 17,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 24,
+    "name": "Paladin",
+    "realm": "Humano",
+    "element": "Aire",
+    "image": "1722273545547_image_.png",
+    "power": 22,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 25,
+    "name": "Gargola",
+    "realm": "del mas alla",
+    "element": "Fuego",
+    "image": "1722274446395_image_.png",
+    "power": 20,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 26,
+    "name": "vampiro",
+    "realm": "del mas alla",
+    "element": "Aire",
+    "image": "1722274262794_image_.png",
+    "power": 24,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 27,
+    "name": "Esqueleto",
+    "realm": "del mas alla",
+    "element": "Agua",
+    "image": "1722274140539_image_.png",
+    "power": 14,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 28,
+    "name": "Zombie",
+    "realm": "del mas alla",
+    "element": "Tierra",
+    "image": "1722274165763_image_.png",
+    "power": 19,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 29,
+    "name": "Fantasma",
+    "realm": "del mas alla",
+    "element": "Aire",
+    "image": "1722274468860_image_.png",
+    "power": 12,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 30,
+    "name": "Espectro",
+    "realm": "del mas alla",
+    "element": "Fuego",
+    "image": "1722274219114_image_.png",
+    "power": 22,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 31,
+    "name": "Cangrejo",
+    "realm": "del Agua",
+    "element": "Aire",
+    "image": "1722275089234_image_.png",
+    "power": 18,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 32,
+    "name": "Leviatan",
+    "realm": "del Agua",
+    "element": "Agua",
+    "image": "1722274970307_image_.png",
+    "power": 23,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 33,
+    "name": "Kraken",
+    "realm": "del Agua",
+    "element": "Tierra",
+    "image": "1722275041970_image_.png",
+    "power": 18,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 34,
+    "name": "Triton",
+    "realm": "del Agua",
+    "element": "Agua",
+    "image": "1722275075690_image_.png",
+    "power": 14,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 35,
+    "name": "Sirena",
+    "realm": "del Agua",
+    "element": "Aire",
+    "image": "1722274993091_image_.png",
+    "power": 17,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 36,
+    "name": "Reina Sirena",
+    "realm": "del Agua",
+    "element": "Fuego",
+    "image": "1722275056578_image_.png",
+    "power": 20,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 37,
+    "name": "Pegaso",
+    "realm": "del Aire",
+    "element": "Agua",
+    "image": "1722275557431_image_.png",
+    "power": 17,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 38,
+    "name": "Unicornio Alado",
+    "realm": "del Aire",
+    "element": "Aire",
+    "image": "1722275435706_image_.png",
+    "power": 24,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 39,
+    "name": "Grifo",
+    "realm": "del Aire",
+    "element": "Tierra",
+    "image": "1722275592208_image_.png",
+    "power": 15,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 40,
+    "name": "Ave Fenix",
+    "realm": "del Aire",
+    "element": "Fuego",
+    "image": "1722275451921_image_.png",
+    "power": 21,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 41,
+    "name": "Arpia",
+    "realm": "del Aire",
+    "element": "Tierra",
+    "image": "1722275489833_image_.png",
+    "power": 14,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 42,
+    "name": "Reina Arpia",
+    "realm": "del Aire",
+    "element": "Aire",
+    "image": "1722275579530_image_.png",
+    "power": 19,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 43,
+    "name": "Obrero",
+    "realm": "Insecto",
+    "element": "Fuego",
+    "image": "1722277371575_image_.png",
+    "power": 12,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 44,
+    "name": "Campeon",
+    "realm": "Insecto",
+    "element": "Tierra",
+    "image": "1722277248632_image_.png",
+    "power": 23,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 45,
+    "name": "Guardian",
+    "realm": "Insecto",
+    "element": "Fuego",
+    "image": "1722277384991_image_.png",
+    "power": 17,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 46,
+    "name": "Reina",
+    "realm": "Insecto",
+    "element": "Tierra",
+    "image": "1722276094560_image_.png",
+    "power": 19,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 47,
+    "name": "Guerrero",
+    "realm": "Insecto",
+    "element": "Aire",
+    "image": "1722277407326_image_.png",
+    "power": 15,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 48,
+    "name": "Espia",
+    "realm": "Insecto",
+    "element": "Agua",
+    "image": "1722277417422_image_.png",
+    "power": 19,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 49,
+    "name": "Troll",
+    "realm": "Orco",
+    "element": "Tierra",
+    "image": "1721949499127_image_.jpg",
+    "power": 20,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 50,
+    "name": "Gladiador",
+    "realm": "Orco",
+    "element": "Fuego",
+    "image": "1721949586199_image_.jpg",
+    "power": 23,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 51,
+    "name": "Esclavo",
+    "realm": "Orco",
+    "element": "Tierra",
+    "image": "1722180387642_image_.png",
+    "power": 15,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 52,
+    "name": "Artillero",
+    "realm": "Orco",
+    "element": "Fuego",
+    "image": "1722179484052_image_.jpg",
+    "power": 12,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 53,
+    "name": "Capitan",
+    "realm": "Orco",
+    "element": "Agua",
+    "image": "1721949396936_image_.jpg",
+    "power": 17,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 54,
+    "name": "General",
+    "realm": "Orco",
+    "element": "Aire",
+    "image": "1722179536034_image_.png",
+    "power": 20,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 55,
+    "name": "Garuda",
+    "realm": "de las Bestias",
+    "element": "Aire",
+    "image": "1722350844205_image_.png",
+    "power": 20,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 56,
+    "name": "Halconario",
+    "realm": "de las Bestias",
+    "element": "Aire",
+    "image": "1722350864453_image_.png",
+    "power": 19,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 57,
+    "name": "Bestia del pantano",
+    "realm": "de las Bestias",
+    "element": "Agua",
+    "image": "1722350874157_image_.png",
+    "power": 19,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 58,
+    "name": "Quimera",
+    "realm": "de las Bestias",
+    "element": "Fuego",
+    "image": "1722350888233_image_.png",
+    "power": 17,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 59,
+    "name": "Hombre Lobo",
+    "realm": "de las Bestias",
+    "element": "Tierra",
+    "image": "1722350907237_image_.png",
+    "power": 23,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 60,
+    "name": "Lycantropo",
+    "realm": "de las Bestias",
+    "element": "Tierra",
+    "image": "1722350919537_image_.png",
+    "power": 21,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 61,
+    "name": "Guerrero Celestial",
+    "realm": "de la Luz",
+    "element": "Tierra",
+    "image": "1722350960747_image_.png",
+    "power": 25,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 62,
+    "name": "Heroe Legendario",
+    "realm": "de la Luz",
+    "element": "Fuego",
+    "image": "1722350976356_image_.png",
+    "power": 26,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 63,
+    "name": "Arcangel",
+    "realm": "de la Luz",
+    "element": "Aire",
+    "image": "1722351158978_image_.png",
+    "power": 22,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 64,
+    "name": "Dragon Dorado",
+    "realm": "de la Luz",
+    "element": "Fuego",
+    "image": "1722351011634_image_.png",
+    "power": 21,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 65,
+    "name": "Hada",
+    "realm": "de la Luz",
+    "element": "Agua",
+    "image": "1722351106123_image_.png",
+    "power": 17,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 66,
+    "name": "Hada Brillante",
+    "realm": "de la Luz",
+    "element": "Agua",
+    "image": "1722351121338_image_.png",
+    "power": 25,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 67,
+    "name": "Dragon Blanco",
+    "realm": "de la Nieve",
+    "element": "Fuego",
+    "image": "1722351236557_image_.png",
+    "power": 23,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 68,
+    "name": "Dragon Acorazado",
+    "realm": "de la Nieve",
+    "element": "Fuego",
+    "image": "1722351248641_image_.png",
+    "power": 24,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 69,
+    "name": "Golem de Hielo",
+    "realm": "de la Nieve",
+    "element": "Agua",
+    "image": "1722351262209_image_.png",
+    "power": 20,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 70,
+    "name": "Demonio de Hielo",
+    "realm": "de la Nieve",
+    "element": "Aire",
+    "image": "1722351298589_image_.png",
+    "power": 21,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 71,
+    "name": "Yeti",
+    "realm": "de la Nieve",
+    "element": "Tierra",
+    "image": "1722351275468_image_.png",
+    "power": 19,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 72,
+    "name": "Yeti Guardian",
+    "realm": "de la Nieve",
+    "element": "Tierra",
+    "image": "1722351285412_image_.png",
+    "power": 20,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 73,
+    "name": "Momia Ancestral",
+    "realm": "de la Oscuridad",
+    "element": "Tierra",
+    "image": "1722351343003_image_.png",
+    "power": 20,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 74,
+    "name": "Faraon",
+    "realm": "de la Oscuridad",
+    "element": "Tierra",
+    "image": "1722351405571_image_.png",
+    "power": 21,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 75,
+    "name": "Engrendo",
+    "realm": "de la Oscuridad",
+    "element": "Fuego",
+    "image": "1722351489898_image_.png",
+    "power": 18,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 76,
+    "name": "Monstruo Marino",
+    "realm": "de la Oscuridad",
+    "element": "Agua",
+    "image": "1722351500282_image_.png",
+    "power": 19,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 77,
+    "name": "Cuervo Demonio",
+    "realm": "de la Oscuridad",
+    "element": "Aire",
+    "image": "1722351510470_image_.png",
+    "power": 21,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 78,
+    "name": "Cuervo de combate",
+    "realm": "de la Oscuridad",
+    "element": "Aire",
+    "image": "1722351524457_image_.png",
+    "power": 22,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 79,
+    "name": "Esfinge",
+    "realm": "Mistico",
+    "element": "Tierra",
+    "image": "1722351831248_image_.png",
+    "power": 22,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 80,
+    "name": "Esfinge Guerrera",
+    "realm": "Mistico",
+    "element": "Fuego",
+    "image": "1722351842353_image_.png",
+    "power": 22,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 81,
+    "name": "Cancerbero",
+    "realm": "Mistico",
+    "element": "Fuego",
+    "image": "1722351855888_image_.png",
+    "power": 21,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 82,
+    "name": "Minotauro",
+    "realm": "Mistico",
+    "element": "Aire",
+    "image": "1722351868605_image_.png",
+    "power": 20,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 83,
+    "name": "Hydra",
+    "realm": "Mistico",
+    "element": "Agua",
+    "image": "1722351878166_image_.png",
+    "power": 19,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 84,
+    "name": "Hydra Acorazada",
+    "realm": "Mistico",
+    "element": "Agua",
+    "image": "1722351889118_image_.png",
+    "power": 20,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 85,
+    "name": "Cazarrecompenza",
+    "realm": "Guerrero",
+    "element": "Aire",
+    "image": "1722351933790_image_.png",
+    "power": 19,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 86,
+    "name": "Vengador",
+    "realm": "Guerrero",
+    "element": "Fuego",
+    "image": "1722351952151_image_.png",
+    "power": 20,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 87,
+    "name": "Samurai",
+    "realm": "Guerrero",
+    "element": "Tierra",
+    "image": "1722351971775_image_.png",
+    "power": 22,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 88,
+    "name": "Pirata",
+    "realm": "Guerrero",
+    "element": "Agua",
+    "image": "1722351981959_image_.png",
+    "power": 18,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 89,
+    "name": "Barbaro",
+    "realm": "Guerrero",
+    "element": "Tierra",
+    "image": "1722352003939_image_.png",
+    "power": 16,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 90,
+    "name": "Barbaro Guardian",
+    "realm": "Guerrero",
+    "element": "Tierra",
+    "image": "1722352015022_image_.png",
+    "power": 18,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 91,
+    "name": "Cactus Ardiente",
+    "realm": "Vegetal",
+    "element": "Fuego",
+    "image": "1722352070639_image_.png",
+    "power": 21,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 92,
+    "name": "Cactus Gladiador",
+    "realm": "Vegetal",
+    "element": "Agua",
+    "image": "1722352081271_image_.png",
+    "power": 20,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 93,
+    "name": "Algas Mutantes",
+    "realm": "Vegetal",
+    "element": "Agua",
+    "image": "1722352105190_image_.png",
+    "power": 22,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 94,
+    "name": "Espinas Voladoras",
+    "realm": "Vegetal",
+    "element": "Aire",
+    "image": "1722352115880_image_.png",
+    "power": 19,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 95,
+    "name": "Arbol Humano",
+    "realm": "Vegetal",
+    "element": "Tierra",
+    "image": "1722352125982_image_.png",
+    "power": 18,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 96,
+    "name": "Arbol Guerrero",
+    "realm": "Vegetal",
+    "element": "Tierra",
+    "image": "1722352134992_image_.png",
+    "power": 19,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 97,
+    "name": "Velociraptor",
+    "realm": "Prehistorico",
+    "element": "Fuego",
+    "image": "1722352167939_image_.png",
+    "power": 20,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 98,
+    "name": "Velociraptor Gladiador",
+    "realm": "Prehistorico",
+    "element": "Fuego",
+    "image": "1722352178638_image_.png",
+    "power": 23,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 99,
+    "name": "Plestosaurio",
+    "realm": "Prehistorico",
+    "element": "Agua",
+    "image": "1722352187358_image_.png",
+    "power": 17,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 100,
+    "name": "T-Rex",
+    "realm": "Prehistorico",
+    "element": "Tierra",
+    "image": "1722352197770_image_.png",
+    "power": 24,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 101,
+    "name": "Pterodactilo",
+    "realm": "Prehistorico",
+    "element": "Aire",
+    "image": "1722352207303_image_.png",
+    "power": 18,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 102,
+    "name": "Pterodactilo Acorazado",
+    "realm": "Prehistorico",
+    "element": "Aire",
+    "image": "1722352216624_image_.png",
+    "power": 19,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 103,
+    "name": "Nereida",
+    "realm": "de la Hechiceria",
+    "element": "Agua",
+    "image": "1722352257133_image_.png",
+    "power": 18,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 104,
+    "name": "Reina Nereida",
+    "realm": "de la Hechiceria",
+    "element": "Agua",
+    "image": "1722352266118_image_.png",
+    "power": 22,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 105,
+    "name": "Archimago",
+    "realm": "de la Hechiceria",
+    "element": "Tierra",
+    "image": "1722352274951_image_.png",
+    "power": 21,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 106,
+    "name": "Genio",
+    "realm": "de la Hechiceria",
+    "element": "Fuego",
+    "image": "1722352284349_image_.png",
+    "power": 23,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 107,
+    "name": "Bruja",
+    "realm": "de la Hechiceria",
+    "element": "Aire",
+    "image": "1722352296655_image_.png",
+    "power": 18,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 108,
+    "name": "Mega Bruja",
+    "realm": "de la Hechiceria",
+    "element": "Aire",
+    "image": "1722352305447_image_.png",
+    "power": 20,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 109,
+    "name": "Demonio Esmeralda",
+    "realm": "Roca",
+    "element": "Tierra",
+    "image": "1722352350910_image_.png",
+    "power": 18,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 110,
+    "name": "Demonio Aguamarina",
+    "realm": "Roca",
+    "element": "Agua",
+    "image": "1722352360046_image_.png",
+    "power": 18,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 111,
+    "name": "Quimera",
+    "realm": "Roca",
+    "element": "Fuego",
+    "image": "1722352372063_image_.png",
+    "power": 23,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 112,
+    "name": "Golem de Marmol",
+    "realm": "Roca",
+    "element": "Tierra",
+    "image": "1722352381423_image_.png",
+    "power": 21,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 113,
+    "name": "Aguila de Rubi",
+    "realm": "Roca",
+    "element": "Aire",
+    "image": "1722352391112_image_.png",
+    "power": 18,
+    "description": "No hay descipcion disponible"
+  },
+  {
+    "id": 114,
+    "name": "Aguila de Roca",
+    "realm": "Roca",
+    "element": "Aire",
+    "image": "1722352399430_image_.png",
+    "power": 20,
+    "description": "No hay descipcion disponible"
+  }
+]

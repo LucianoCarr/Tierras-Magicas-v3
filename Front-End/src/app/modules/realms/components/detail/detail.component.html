@@ -1,0 +1,20 @@
+<div class="card-header">
+  <h1>Personajes del Reino {{ realm.name }}</h1>
+  <img class="imgRealm" [src]="realm.image" alt="Imagen del reino">
+</div>
+  <div class="" *ngIf="realm">
+    <ul class="card">
+      <li *ngFor="let character of realm.characters">
+        <p>{{ character.name }}</p>
+        <img [src]="'/img/' + character.image" alt="Imagen del personaje">
+        <p>Poder: {{ character.power }}</p>
+        <p>Elemento: {{ character.elementName }} </p>
+        <button class="button-custom">Descripción</button>
+        <!-- <p>Descripción: {{character.description}}</p> -->
+         <!-- - Reino {{ character.realmName }} -->
+      </li>
+    </ul>
+  </div>
+  <div class="card-button">
+    <button class="cancelButton" type="button" [routerLink]="'/realm/all'" >Cerrar</button>
+  </div>

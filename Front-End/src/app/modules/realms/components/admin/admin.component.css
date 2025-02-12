@@ -1,0 +1,102 @@
+h1 {
+    font-size: 40px;
+    text-decoration-line: underline;
+    justify-self: center;
+}
+
+.cardBody {
+    background-image: url(../../../../../../public/img/papel_de_pergamino-transformed.jpeg);
+    background-size: contain;
+}
+
+.card {
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+ul {
+    display: flex;
+}
+
+li {
+    border: 1px solid black;
+    width: 130px;
+}
+
+.adminImg {
+    min-height: 80px;
+    max-width: 100px;
+    mix-blend-mode: color-burn;
+}
+
+
+
+
+
+
+
+
+
+/* ACORDION */
+.accordion {
+    width: 95%;
+    justify-self: center;
+  }
+  
+  .accordion-item {
+    border: 2px solid black;
+    margin-bottom: 5px;
+  }
+  
+  .accordion-toggle {
+    display: none;
+  }
+  
+  .accordion-header {
+    display: block;
+    padding: 10px;
+    background: #f1f1f1;
+    cursor: pointer;
+    font-weight: bold;
+    border-bottom: 2px solid black;
+  }
+  
+  .accordion-content {
+    display: none;
+    padding: 10px;
+  }
+  
+  .accordion-toggle:checked + .accordion-header + .accordion-content {
+    display: block;
+  }
+  
+  /* Estilos específicos para personajes */
+  .character-header {
+    background: #ddd;
+    padding-left: 20px;
+  }
+  
+  .character-image {
+    width: 100px;
+    height: auto;
+    display: block;
+    margin: 10px 0;
+  }
+
+  .accordion-atributtes {
+        display: flex;
+        justify-content: space-between;
+        font-weight: bold;
+  }
+  
+  .atributtes {
+    align-content: center;
+  }
+
+  .description {
+    width: 30%;
+    align-content: center;
+  }

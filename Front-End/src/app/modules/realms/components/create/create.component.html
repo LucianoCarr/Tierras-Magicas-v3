@@ -1,0 +1,14 @@
+<h1>Crear Reino</h1>
+
+<form [formGroup]="createForm" class="container">
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="name">Nombre:  </label>
+        <input type="text" class="form-control" id="name" formControlName="name">
+        <div *ngIf="createForm.controls['name'].invalid && createForm.controls['name'].touched">
+          <small style="color: red; font-size: 22px;">El nombre es obligatorio</small>
+        </div>
+      </div>
+    </div>
+      <button type="submit" class="save" (click)="save()">Crear</button>
+</form>

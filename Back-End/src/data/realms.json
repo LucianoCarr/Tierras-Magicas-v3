@@ -1,0 +1,97 @@
+[
+  {
+    "id": 1,
+    "image": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/601c3ef3-a552-4e92-a61d-8465be7eed8f/d18cwpr-416cf5f6-9a2a-42e8-a423-44f00c2c8b9c.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzYwMWMzZWYzLWE1NTItNGU5Mi1hNjFkLTg0NjViZTdlZWQ4ZlwvZDE4Y3dwci00MTZjZjVmNi05YTJhLTQyZTgtYTQyMy00NGYwMGMyYzhiOWMuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.i68NaJOGSU-_J5dY0CoVIkRFDMPtsTzzdVOkCj_MAnU",
+    "name": "de los Dragones"
+  },
+  {
+    "id": 2,
+    "image": "https://previews.123rf.com/images/manbeach/manbeach1804/manbeach180400235/98953714-creativa-silueta-ilustraci%C3%B3n-tribal-vector-cabeza-de-tigre-concepto-de-dise%C3%B1o-simple-fauna-animal.jpg",
+    "name": "Felino"
+  },
+  {
+    "id": 3,
+    "image": "https://img.freepik.com/vector-premium/elfo-oscuro-tatuaje-tribal-moderno-arte-lineas-abstractas-personas-contorno-minimalista-vector_894890-1610.jpg",
+    "name": "Elfo"
+  },
+  {
+    "id": 4,
+    "image": "https://www.shutterstock.com/image-vector/illustration-vector-graphic-tribal-art-260nw-2320205161.jpg",
+    "name": "Humano"
+  },
+  {
+    "id": 5,
+    "image": "https://png.pngtree.com/png-vector/20240518/ourlarge/pngtree-one-eye-tribal-outline-design-png-image_12476270.png",
+    "name": "del mas alla"
+  },
+  {
+    "id": 6,
+    "image": "https://i.pinimg.com/originals/11/fe/3c/11fe3ceb2a04c0f48c935cd72d5acef4.png",
+    "name": "del Agua"
+  },
+  {
+    "id": 7,
+    "image": "https://i.pinimg.com/736x/03/d1/22/03d122c53f16af7ee39fb36c6cfd1c47.jpg",
+    "name": "del Aire"
+  },
+  {
+    "id": 8,
+    "image": "https://www.shutterstock.com/image-vector/vector-abstract-bee-wasp-tattoo-260nw-1687540762.jpg",
+    "name": "Insecto"
+  },
+  {
+    "id": 9,
+    "image": "https://www.tattootribes.com/multimedia/110/tribal-labrys-tattoo.jpg",
+    "name": "Orco"
+  },
+  {
+    "id": 10,
+    "image": "https://img.freepik.com/vector-premium/plantilla-diseno-tatuaje-logotipo-cabeza-lobo-tribal-ilustracion-vectorial_463676-681.jpg",
+    "name": "de las Bestias"
+  },
+  {
+    "id": 11,
+    "image": "https://i.pinimg.com/474x/62/f1/d8/62f1d8dfc7e7dfeb9878240b060edb55.jpg",
+    "name": "de la Luz"
+  },
+  {
+    "id": 12,
+    "image": "https://static.vecteezy.com/system/resources/previews/024/742/571/non_2x/tribal-ethnic-tattoo-icon-illustration-design-logo-free-vector.jpg",
+    "name": "de la Nieve"
+  },
+  {
+    "id": 13,
+    "image": "https://us.123rf.com/450wm/babbanbillo/babbanbillo2401/babbanbillo240103375/221378559-glorious-gleam-sun-insignia-vibrant-vista-sun-icon.jpg",
+    "name": "de la Oscuridad"
+  },
+  {
+    "id": 14,
+    "image": "https://i.pinimg.com/564x/b8/a6/f2/b8a6f20adbcde09585791a0e0b9c0cda.jpg",
+    "name": "Mistico"
+  },
+  {
+    "id": 15,
+    "image": "https://previews.123rf.com/images/rikley/rikley2107/rikley210700051/171846952-hermosa-ilustraci%C3%B3n-de-tatuajes-tribales-vectoriales-monocrom%C3%A1ticos-con-silueta-de-guerrera-de-mujer.jpg",
+    "name": "Guerrero"
+  },
+  {
+    "id": 16,
+    "image": "https://i.pinimg.com/originals/9e/ec/bb/9eecbb1ca56c4c8f1a5cfbdadd757e27.png",
+    "name": "Vegetal"
+  },
+  {
+    "id": 17,
+    "image": "https://media.istockphoto.com/id/1167170833/ja/%E3%83%99%E3%82%AF%E3%82%BF%E3%83%BC/%E7%82%8E%E3%81%AE%E6%8A%BD%E8%B1%A1%E7%9A%84%E3%81%AA%E3%83%B4%E3%82%A7%E3%83%AD%E3%82%AD%E3%83%A9%E3%83%97%E3%83%88%E3%83%AB.jpg?s=612x612&w=0&k=20&c=ZOOKHw7MATr86mI1RHm2B6MOgpI7uscbx_QbwlbCQdI=",
+    "name": "Prehistorico"
+  },
+  {
+    "id": 18,
+    "image": "https://www.shutterstock.com/shutterstock/photos/1918639094/display_1500/stock-vector-magic-staff-or-stick-with-crystal-ball-antique-esoteric-weapon-for-wizardry-and-witchcraft-black-1918639094.jpg",
+    "name": "de la Hechiceria"
+  },
+  {
+    "id": 19,
+    "image": "https://t4.ftcdn.net/jpg/06/97/04/81/360_F_697048180_jW0UPLmCWDEonB9pDQgBv1359wPaN7av.jpg",
+    "name": "Roca"
+  }
+]

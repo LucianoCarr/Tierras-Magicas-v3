@@ -1,0 +1,17 @@
+<div *ngIf="realm" class="card">
+  <h1>Editar Reino</h1>
+  <form [formGroup]="editForm" (ngSubmit)="updateRealm()">
+    <div class="editField">
+      <label for="name">Editar Nombre: </label>
+      <input class="name" id="name" type="text" formControlName="name" required>
+      <div *ngIf="editForm.controls['name'].invalid && editForm.controls['name'].touched">
+        <small style="color: red;">El nombre es obligatorio</small>
+      </div>
+    </div>
+    <img class="imgRealm" *ngIf="realm.image" [src]="realm.image" alt="Imagen del reino">
+    <div class="editButtons">
+      <button class="editButton" type="submit" [disabled]="editForm.invalid || !editForm.dirty">Guardar Cambios</button>
+      <button class="cancelButton" type="button" [routerLink]="'/realm/all'">Cancelar</button>
+    </div>
+  </form>
+</div>

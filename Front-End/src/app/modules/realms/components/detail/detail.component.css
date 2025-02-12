@@ -1,0 +1,124 @@
+/* titulo */
+h1 {
+    font-size: 40px;
+    font-weight: bold;
+    text-decoration-line: underline;
+    justify-self: center;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.imgRealm {
+    min-height: 80px;
+    max-width: 100px;
+    mix-blend-mode: color-burn;
+}
+
+/* personajes */
+.card {
+    /* border: 1px solid black; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    margin: 40px 0px;
+}
+
+ul {
+    display: flex;
+}
+
+li {
+    border: 1px solid black;
+    width: 130px;
+    border-width: 4px 5px 3px 3px;
+    min-height: -webkit-fill-available;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+p {
+    justify-self: center;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* botones */
+.card-button {
+    justify-self: center;
+    margin-top: 18px;
+}
+
+.cancelButton {
+    background-color: darkgrey;
+    font-size: 18px;
+    padding: 0px 22px;
+    color: white;
+    margin-top: 10px;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+.cancelButton {
+    background-color: darkgrey;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 0px 22px;
+    margin-top: 10px;
+    border-radius: 8px;
+    color: white;
+}
+
+
+/* DESCRPCION BOTON */
+.button-custom {
+    background: white;
+    color: #333;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 2px 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    isolation: isolate;
+  }
+  
+  /* Esquinas coloreadas en forma triangular */
+  .button-custom::before,
+  .button-custom::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(45deg, #d54dff, #d54dff);
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+  }
+  
+  .button-custom::before {
+    top: 0;
+    left: 0;
+  }
+  
+  .button-custom::after {
+    bottom: 0;
+    right: 0;
+    transform: rotate(180deg);
+  }
+  
+  /* Efecto hover */
+/*   .button-custom:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+  } */
+  

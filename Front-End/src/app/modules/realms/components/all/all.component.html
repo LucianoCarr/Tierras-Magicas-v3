@@ -1,0 +1,36 @@
+<h1 class="allRealm">Vista de Reinos</h1>
+
+<nav class="navbar">
+  <h2 class="routes" [routerLink]="'/character/create'">Agregar Personaje</h2>
+  <h2 class="routes" [routerLink]="'/realm/create'">Agregar Reino</h2>
+  <h2 class="routes" [routerLink]="'/character/all'">Ver Personajes</h2>
+  <h2 class="routes" [routerLink]="'/realm/all'">Ver Reinos</h2>
+  <form class="header-form" id="form-search">
+    <div class="search">
+      <input type="text" name="keywords" id="search" placeholder="Buscar">
+      <button type="submit"><i class="fas fa-search"></i></button>
+    </div>
+  </form>
+  <h2 [routerLink]="'/realm/admin'">Usuario <i class="fa-solid fa-user"></i></h2>
+</nav>
+
+<!-- LISTA DE REINOS -->
+<div class="cardBody">
+  <div class="card" *ngFor="let realm of realms">
+    <p class="allName">Reino {{realm.name}}</p>
+    <img class="allimg" [src]="realm.image" [alt]="'imagen del reino '+ realm.name">
+    <button class="edit" [routerLink]="'/realm/edit/'+ realm.id">Editar</button>
+    <button class="detail" [routerLink]="'/realm/detail/'+ realm.id">Ver detalles</button>
+    <button class="delete" (click)="deleteOpen(realm)">Eliminar</button>
+  </div>
+</div>
+
+<!-- ELIMINAR -->
+<app-delete
+[realm]="deleteRealm" 
+[isVisible]="deleteRealm !== null" 
+(confirmDeleteEvent)="confirmDelete($event)"
+(closeModal)="deleteClose()">
+</app-delete>
+
+

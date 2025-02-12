@@ -1,0 +1,12 @@
+{
+  "name": "tierras-magicas",
+  "version": "1.0.0",
+  "scripts": {
+    "start:backend": "cd Back-End && npm start",      
+    "start:frontend": "cd Front-End && ng serve",     
+    "go": "concurrently \"npm run start:backend\" \"npm run start:frontend\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
