@@ -1,18 +1,19 @@
-import { Component, OnInit, OnChanges } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Realm, Character } from '../../../../models/realms.model';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { RealmService } from '../../../../services/realm.service';
+import { HeaderComponent } from "../../../others/header/header.component";
 
 
 @Component({
   selector: 'app-detail',
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, HeaderComponent],
   templateUrl: './detail.component.html',
   styleUrl: './detail.component.css'
 })
 
-export class DetailComponent implements OnInit, OnChanges {
+export class DetailComponent implements OnInit {
 
   realm: Realm = new Realm();
   id: number | null = null;

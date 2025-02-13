@@ -3,10 +3,11 @@ import { CharacterService } from '../../../../services/character.service';
 import { Router, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { Character } from '../../../../models/character.model';
+import { HeaderComponent } from "../../../others/header/header.component";
 
 @Component({
   selector: 'app-all',
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, HeaderComponent],
   templateUrl: './all.component.html',
   styleUrl: './all.component.css'
 })
@@ -29,18 +30,23 @@ export class AllComponent implements OnInit {
   getCharacters() {
     this.characterService.all()
       .then(res => {
-        //console.log('Datos recibidos:', res); // Verifica la estructura de los datos
         this.characters = res.map(character => {
-          // Construye la URL completa de la imagen
-          character.image = `http://localhost:5000/img/${character.image}`;
-          //console.log('URL de la imagen:', character.image); // Verifica las URLs de las imágenes
+          if (character.image) {
+            // Si la imagen ya es una URL, la mantiene, sino, la concatena con la base de imágenes
+            character.image = character.image.startsWith('http') 
+              ? character.image 
+              : `http://localhost:5000/img/${character.image}`;
+          } else {
+            // Imagen por defecto si no hay ninguna
+            character.image = 'http://localhost:5000/img/default.jpg';
+          }
           return character;
         });
-        //console.log('Personajes asignados:', this.characters); // Verifica que los personajes se asignen correctamente
       })
       .catch(error => {
         console.error('Error al obtener los Personajes:', error);
       });
   }
+  
   
 }

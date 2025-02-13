@@ -1,18 +1,19 @@
-import { Component, OnInit, OnChanges } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Realm } from '../../../../models/realms.model';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RealmService } from '../../../../services/realm.service';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, RouterModule, Router } from '@angular/router';
+import { HeaderComponent } from "../../../others/header/header.component";
 
 @Component({
   selector: 'app-edit',
-  imports: [CommonModule, ReactiveFormsModule, RouterModule],
+  imports: [CommonModule, ReactiveFormsModule, RouterModule, HeaderComponent],
   templateUrl: './edit.component.html',
   styleUrls: ['./edit.component.css']
 })
 
-export class EditComponent implements OnInit, OnChanges {
+export class EditComponent implements OnInit {
 
   realm: Realm = new Realm();
   id: number | null = null;

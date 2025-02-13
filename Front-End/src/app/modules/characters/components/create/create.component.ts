@@ -7,10 +7,12 @@ import { Realm } from '../../../../models/realms.model';
 import { Character } from '../../../../models/character.model';
 import { CharacterService } from '../../../../services/character.service';
 import { Element } from '../../../../models/elements.model';
+import { Constants } from '../../../../../app.settings';
+import { HeaderComponent } from "../../../others/header/header.component";
  
 @Component({
   selector: 'app-create',
-  imports: [FormsModule, ReactiveFormsModule, CommonModule],
+  imports: [FormsModule, ReactiveFormsModule, CommonModule, HeaderComponent],
   templateUrl: './create.component.html',
   styleUrl: './create.component.css'
 })
@@ -31,9 +33,10 @@ export class CreateComponent {
   ) {
     this.createForm = this.fb.group({
       name: ['', Validators.required],
+      image: [Constants.IMG],
       realm: [null, Validators.required],
       power: [null, [Validators.required, Validators.min(1)]], // No puede ser 0
-      element: [null, Validators.required],
+      //element: [null, Validators.required],
       description: [''],
    })
 }
@@ -69,7 +72,7 @@ save() {
 
   this.characterService.create(this.createForm.value)
     .then(() => {
-      this.router.navigate(['/realm/all']);
+      this.router.navigate(['/character/all']);
     })
     .catch(error => {
       console.error('Error al crear personaje:', error);

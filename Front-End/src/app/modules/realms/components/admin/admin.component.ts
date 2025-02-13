@@ -2,10 +2,11 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { CharacterPerRealm } from '../../../../models/realms.model';
 import { RealmService } from '../../../../services/realm.service';
+import { HeaderComponent } from "../../../others/header/header.component";
 
 @Component({
   selector: 'app-admin',
-  imports: [CommonModule],
+  imports: [CommonModule, HeaderComponent],
   templateUrl: './admin.component.html',
   styleUrl: './admin.component.css'
 })

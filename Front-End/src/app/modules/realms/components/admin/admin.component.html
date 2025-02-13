@@ -1,21 +1,4 @@
 <h1>Vista Personajes por Reino</h1>
-
-<!-- <div class="cardBody">
-    <div class="card" *ngFor="let realm of realmPerCharacter">
-        <h2>Reino {{ realm.name }}</h2>
-        <img [src]="realm.image" alt="Imagen del reino">
-        <h3>Personajes:</h3>
-    <ul>
-        <li *ngFor="let character of realm.characters">
-            <p>{{ character.name }} - Reino {{ character.realmName }}</p>
-            <img [src]="'/img/' + character.image" alt="Imagen del personaje">
-            <p>Poder: {{ character.power }} - Elemento: {{ character.elementName }} </p>
-            <p>- Descripción: {{character.description}}</p>
-      </li>
-    </ul>
-    </div>
-</div> -->
-
 <div class="dashboard">
     <div class="accordion">
       <div class="accordion-item" *ngFor="let realm of realmPerCharacter; let i = index">

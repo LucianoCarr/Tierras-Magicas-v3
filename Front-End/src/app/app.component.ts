@@ -6,10 +6,12 @@ import { EditComponent } from "./modules/realms/components/edit/edit.component";
 import { DetailComponent } from "./modules/realms/components/detail/detail.component";
 import { DeleteComponent } from "./modules/realms/components/delete/delete.component";
 import { AdminComponent } from "./modules/realms/components/admin/admin.component";
+import { HeaderComponent } from "./modules/others/header/header.component";
+import { FooterComponent } from "./modules/others/footer/footer.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, HeaderComponent, FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

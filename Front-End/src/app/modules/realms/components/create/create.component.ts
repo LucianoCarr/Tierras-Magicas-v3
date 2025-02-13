@@ -5,11 +5,12 @@ import { RealmService } from '../../../../services/realm.service';
 import { Realm } from '../../../../models/realms.model';
 import { Constants } from '../../../../../app.settings';
 import { Router } from '@angular/router';
+import { HeaderComponent } from "../../../others/header/header.component";
 
 
 @Component({
   selector: 'app-create',
-  imports: [CommonModule, FormsModule, ReactiveFormsModule],
+  imports: [CommonModule, FormsModule, ReactiveFormsModule, HeaderComponent],
   templateUrl: './create.component.html',
   styleUrl: './create.component.css'
 })

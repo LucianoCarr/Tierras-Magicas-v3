@@ -1,7 +1,6 @@
 /* titulo */
-h1 {
+.tittle {
     font-size: 40px;
-    font-weight: bold;
     text-decoration-line: underline;
     justify-self: center;
 }
