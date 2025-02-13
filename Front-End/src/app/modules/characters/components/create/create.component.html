@@ -1,14 +1,49 @@
-<p>create works!</p>
-<form [formGroup]="form">
+<h1>Crear Reino</h1>
+
+<form [formGroup]="createForm">
+  <div class="form-row">
+    <!-- NOMBRE -->
     <div class="form-group">
-        <label>Character Name</label>
-        <input type="text" formControlName="name">
+        <label for="name">Nombre:  </label>
+        <input type="text" class="form-control" id="name" formControlName="name">
+        <div *ngIf="createForm.controls['name'].invalid && createForm.controls['name'].touched">
+          <small style="color: red; font-size: 22px;">El nombre es obligatorio</small>
+        </div>
     </div>
+     <!-- REINO -->
     <div class="form-group">
-        <label>Realm</label>
-        <select formControlName="realm">
-            <option *ngFor="let realm of realms" [value]="realm.id">{{ realm.name }}</option>
-        </select>
+      <label>Reino:</label>
+      <select formControlName="realm">
+          <option *ngFor="let realm of realms" [value]="realm.id">{{ realm.name }}</option>
+      </select>
+  </div>
+   <!-- PODER -->
+  <div class="form-group">
+    <label for="name">Poder:  </label>
+    <input type="text" class="form-control" id="power" formControlName="power">
+    <div *ngIf="createForm.controls['power'].invalid && createForm.controls['power'].touched">
+      <small style="color: red; font-size: 22px;">El poder tiene que ser un numero</small>
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+  </div>
+   <!-- ELEMENTO -->
+   <div class="form-group">
+    <label>Elemento:</label>
+    <select formControlName="element">
+      <option *ngFor="let element of elements" [value]="element.id">{{ element.name }}</option>
+    </select>
+  </div>
+    <!-- DESCRIPCION   -->
+  <div class="form-group">
+    <label for="name">Descripcion:  </label>
+    <br>
+    <textarea maxlength="150" name="description" id="description" cols="60" rows="5" placeholder="Descripcion del personaje"></textarea>
+    <!-- <input type="box" class="form-control" id="description" formControlName="description"> -->
+    <div *ngIf="createForm.controls['description']">
+    </div>
+  </div>
+</div>
+<!-- BOTON -->
+ <div class="btnSave">
+  <button type="submit" class="save" (click)="save()">Crear</button>
+  </div>
 </form>

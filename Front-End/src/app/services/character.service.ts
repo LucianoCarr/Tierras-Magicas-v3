@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Constants } from '../../app.settings';
 import { Character } from '../models/character.model';
+import { Element } from '../models/elements.model';
 
 
 @Injectable({
@@ -20,16 +21,10 @@ export class CharacterService {
           return response.characters;
         } else {
           return [
-            { id: 0, name: 'No hay personajes', image:'', power:0, element:'', realm:'', description:'' }
+            { id: 0, name: '', image:'', power:0, element:'', realm:'', description:'' }
           ];
         }
       })
-      .catch(error => {
-        console.error('Error al obtener los personajes:', error);
-        return [
-          { id: 0, name: 'No hay personajes', image:'', power:0, element:'', realm:'', description:'' }
-        ];
-      });
   }
 
   detail(id:number):Promise<{Personaje:Character}>{

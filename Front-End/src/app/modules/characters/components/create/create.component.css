@@ -1,0 +1,65 @@
+/* titulo */
+h1 {
+    font-size: 40px;
+    font-weight: bold;
+    text-decoration-line: underline;
+    justify-self: center;
+}
+
+.container {
+    /*  display: flex;
+     justify-content: space-evenly; */
+     justify-items: center;
+     margin: 18px 0px;
+     align-items: center;
+     text-align: center;
+ }
+
+ .form-row {
+    justify-items: left;
+    justify-self: center;
+ }
+
+ .form-group {
+    padding: 12px 0px;
+ }
+
+label {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+input#name {
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+input#power {
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+select {
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+textarea {
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+.btnSave {
+    justify-self: center;
+}
+
+.save {
+    background-color: darkcyan;
+    font-size: 20px;
+    color: white;
+    padding: 4px 16px;
+    margin: 2px;
+    font-weight: bold;
+    border-radius: 10px;
+    margin-top: 14px;
+}
