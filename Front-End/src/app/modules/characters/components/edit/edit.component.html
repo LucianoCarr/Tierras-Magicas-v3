@@ -1,50 +1,57 @@
-<div *ngIf="character" class="card">
-    <h1>Editar Personaje</h1>
-    <form [formGroup]="editForm" (ngSubmit)="updateRealm()">
-      <!-- NOMBRE -->
-      <div class="editField">
-        <label for="name">Editar Nombre: </label>
-        <input class="name" id="name" type="text" formControlName="name" required>
-        <div *ngIf="editForm.controls['name'].invalid && editForm.controls['name'].touched">
-          <small style="color: red;">El nombre es obligatorio</small>
-        </div>
+<div *ngIf="Personaje" class="card">
+  <h1>Editar Personaje</h1>
+  <form [formGroup]="editForm" (ngSubmit)="updateCharacter()">
+    <!-- NOMBRE -->
+    <div class="editField">
+      <label for="name">Nombre: </label>
+      <input id="name" type="text" formControlName="name" required>
+      <div *ngIf="editForm.controls['name'].invalid && editForm.controls['name'].touched">
+        <small style="color: red;">El nombre es obligatorio</small>
       </div>
-      <!-- IMAGEN -->
-      <img class="imgRealm" *ngIf="character.image" [src]="character.image" alt="Imagen del personaje">
-      <!-- PODER -->
-      <div class="editField">
-        <label for="power">Editar poder: </label>
-        <input class="power" id="power" type="text" formControlName="power" required>
-        <div *ngIf="editForm.controls['power'].invalid && editForm.controls['power'].touched">
-          <small style="color: red;">El poder es obligatorio</small>
-        </div>
+    </div>
+    <!-- IMAGEN -->
+    <!-- <label for="image">Imagen:</label> -->
+    <img class="imgChar"  [src]="'/img/' + Personaje.image" alt="Imagen del personaje">
+    <div class="editField">
+      <input type="file" (change)="onFileSelected($event)" accept="image/*">
+    </div>
+    <!-- REINO -->
+    <div class="editField">
+      <label for="realm">Reino:</label>
+      <select id="realm" formControlName="realm">
+        <option *ngFor="let realm of realms" [value]="realm.id">
+          {{ realm.name }}
+        </option>
+      </select>
+    </div>
+    <!-- PODER -->
+    <div class="editField">
+      <label for="power">Poder: </label>
+      <input id="power" type="number" formControlName="power" required>
+      <div *ngIf="editForm.controls['power'].invalid && editForm.controls['power'].touched">
+        <small style="color: red;">El poder es obligatorio</small>
       </div>
-      <!-- REINO -->
-      <div class="editField">
-        <label>Reino:</label>
-        <select id="realm" class="form-control" formControlName="realm">
-          <option *ngFor="let realm of realms" [value]="realm.id">{{ realm.name }}</option>
-        </select>
     </div>
     <!-- ELEMENTO -->
-     <!--  <div class="editField">
-        <label>Reino:</label>
-        <select formControlName="realm">
-            <option *ngFor="let character of characters" [value]="character.id">{{ character.name }}</option>
-        </select>
-    </div> -->
-    <!-- DESCRIPCION -->
-      <div class="editField">
-      <label for="name">Editar Descripcion:  </label>
-      <br>
-      <textarea maxlength="150" name="description" id="description" cols="60" rows="5" placeholder="Descripcion del personaje"></textarea>
-      <div *ngIf="editForm.controls['description']">
-      </div>
+    <div class="editField">
+      <label>Elemento:</label>
+      <select id="element" class="form-control" formControlName="element">
+        <option *ngFor="let element of elements" [value]="element.id" [selected]="element.name === Personaje.element">
+          {{ element.name }}
+        </option>
+      </select>
     </div>
-      <div class="editButtons">
-        <button class="editButton" type="submit" [disabled]="editForm.invalid || !editForm.dirty">Guardar Cambios</button>
-        <button class="cancelButton" type="button" [routerLink]="'/character/all'">Cancelar</button>
-      </div>
-    </form>
-  </div>
-  
+    <!-- DESCRIPCIÓN -->
+    <div class="editField">
+      <label for="name">Descripcion:  </label>
+      <br>
+      <textarea maxlength="150" name="description" id="description" cols="60" rows="5">{{ Personaje.description }}</textarea>
+    </div>
+
+    <!-- BOTONES -->
+    <div class="editButtons">
+      <button class="editButton" type="submit" [disabled]="editForm.invalid || !editForm.dirty">Guardar Cambios</button>
+      <button class="cancelButton" type="button" [routerLink]="'/character/all'">Cancelar</button>
+    </div>
+  </form>
+</div>

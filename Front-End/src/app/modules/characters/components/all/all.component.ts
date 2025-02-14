@@ -3,11 +3,10 @@ import { CharacterService } from '../../../../services/character.service';
 import { Router, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { Character } from '../../../../models/character.model';
-import { HeaderComponent } from "../../../others/header/header.component";
 
 @Component({
   selector: 'app-all',
-  imports: [CommonModule, RouterModule, HeaderComponent],
+  imports: [CommonModule, RouterModule],
   templateUrl: './all.component.html',
   styleUrl: './all.component.css'
 })

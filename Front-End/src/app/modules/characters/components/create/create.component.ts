@@ -8,11 +8,10 @@ import { Character } from '../../../../models/character.model';
 import { CharacterService } from '../../../../services/character.service';
 import { Element } from '../../../../models/elements.model';
 import { Constants } from '../../../../../app.settings';
-import { HeaderComponent } from "../../../others/header/header.component";
  
 @Component({
   selector: 'app-create',
-  imports: [FormsModule, ReactiveFormsModule, CommonModule, HeaderComponent],
+  imports: [FormsModule, ReactiveFormsModule, CommonModule],
   templateUrl: './create.component.html',
   styleUrl: './create.component.css'
 })
@@ -23,6 +22,8 @@ export class CreateComponent {
   realms:Realm[] = [];
   characters: Character[] = [];
   elements: Element[] = []; 
+  defaultImage = Constants.IMG; // Imagen por defecto
+  imagePreview: string | null = null;
   
   constructor(
     private fb: FormBuilder,
@@ -33,7 +34,8 @@ export class CreateComponent {
   ) {
     this.createForm = this.fb.group({
       name: ['', Validators.required],
-      image: [Constants.IMG],
+      //image: [Constants.IMG],
+      image: ['', [Validators.pattern(/(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|jpeg|png|gif)/)]], // Validar URL
       realm: [null, Validators.required],
       power: [null, [Validators.required, Validators.min(1)]], // No puede ser 0
       //element: [null, Validators.required],
@@ -70,6 +72,13 @@ save() {
   this.createForm.markAllAsTouched();
   if (this.createForm.invalid) return;
 
+  // Si el campo 'image' está vacío, asignar la imagen por defecto
+  if (!this.createForm.value.image) {
+    this.createForm.patchValue({ image: this.defaultImage });
+  }
+
+  console.log('Imagen guardada:', this.createForm.value.image); // Verificar qué se está enviando
+
   this.characterService.create(this.createForm.value)
     .then(() => {
       this.router.navigate(['/character/all']);
@@ -77,6 +86,23 @@ save() {
     .catch(error => {
       console.error('Error al crear personaje:', error);
     });
+}
+
+onFileSelected(event: Event) {
+  const file = (event.target as HTMLInputElement).files?.[0];
+  if (!file) return;
+
+  if (file.size > 2 * 1024 * 1024) { // Límite de 2MB
+    alert('El archivo es demasiado grande. Máximo 2MB.');
+    return;
+  }
+
+  const reader = new FileReader();
+  reader.onload = () => {
+    this.imagePreview = reader.result as string;
+    this.createForm.patchValue({ image: this.imagePreview }); // Guardar en el formulario
+  };
+  reader.readAsDataURL(file);
 }
 
 }

@@ -38,6 +38,11 @@ input#power {
     border-radius: 8px;
 }
 
+input#imageUrl {
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
 select {
     border: 1px solid black;
     border-radius: 8px;

@@ -4,11 +4,10 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { RealmService } from '../../../../services/realm.service';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, RouterModule, Router } from '@angular/router';
-import { HeaderComponent } from "../../../others/header/header.component";
 
 @Component({
   selector: 'app-edit',
-  imports: [CommonModule, ReactiveFormsModule, RouterModule, HeaderComponent],
+  imports: [CommonModule, ReactiveFormsModule, RouterModule],
   templateUrl: './edit.component.html',
   styleUrls: ['./edit.component.css']
 })

@@ -32,8 +32,26 @@
       <option *ngFor="let element of elements" [value]="element.id">{{ element.name }}</option>
     </select>
   </div> -->
-    <!-- DESCRIPCION   -->
-  <div class="form-group">
+  <!-- IMAGEN -->
+<!-- Input para subir imagen -->
+<div class="form-group">
+  <label for="imageFile">Subir Imagen:</label>
+  <input type="file" class="form-control" id="imageFile" (change)="onFileSelected($event)">
+</div>
+<!-- Input para URL de imagen -->
+<div class="form-group">
+  <label for="imageUrl">O ingresa una URL:</label>
+  <input type="text" class="form-control" id="imageUrl" formControlName="image">
+</div>
+<!-- Vista previa de imagen -->
+<img [src]="imagePreview || createForm.value.image || defaultImage" 
+alt="Vista previa" style="max-width: 200px; margin-top: 10px; justify-self: center;">
+
+<div style="justify-self: center;" *ngIf="createForm.controls['image'].invalid && createForm.controls['image'].touched">
+  <small style="color: red;">URL de imagen inválida</small>
+</div>
+   <!-- DESCRIPCION   -->
+   <div class="form-group">
     <label for="name">Descripcion:  </label>
     <br>
     <textarea maxlength="150" name="description" id="description" cols="60" rows="5" placeholder="Descripcion del personaje"></textarea>

@@ -5,14 +5,13 @@ import { Realm } from '../../../../models/realms.model';
 import { RouterModule } from '@angular/router';
 import { DeleteComponent } from '../delete/delete.component';
 import { Router } from '@angular/router';
-import { HeaderComponent } from "../../../others/header/header.component";
 
 //PARA CREAR EL COMPONENTE EN ESTA CARPETA
 //ng g c modules/realms/components/all
 
 @Component({
   selector: 'app-all',
-  imports: [CommonModule, RouterModule, DeleteComponent, HeaderComponent],
+  imports: [CommonModule, RouterModule, DeleteComponent],
   templateUrl: './all.component.html',
   styleUrl: './all.component.css'
 })

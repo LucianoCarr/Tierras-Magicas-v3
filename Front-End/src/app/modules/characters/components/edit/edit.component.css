@@ -11,6 +11,10 @@ form {
 }
 
 .editField {
+    padding: 10px 0px;
+}
+
+.editField {
     font-size: 26px;
     font-weight: bold;
     text-align-last: center;
@@ -36,13 +40,13 @@ textarea {
     border-radius: 8px;
 }
 
-.imgRealm {
+.imgChar {
     max-width: 240px;
     mix-blend-mode: color-burn;
     padding: 30px 0px;
     border-width: 4px 5px 3px 3px;
     min-height: -webkit-fill-available;
-    margin: 30px 0px;
+    margin: 15px 0px;
 }
 
 /* botones */

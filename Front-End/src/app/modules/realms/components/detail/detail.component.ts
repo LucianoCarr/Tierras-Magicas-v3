@@ -3,12 +3,11 @@ import { Realm, Character } from '../../../../models/realms.model';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { RealmService } from '../../../../services/realm.service';
-import { HeaderComponent } from "../../../others/header/header.component";
 
 
 @Component({
   selector: 'app-detail',
-  imports: [CommonModule, RouterModule, HeaderComponent],
+  imports: [CommonModule, RouterModule],
   templateUrl: './detail.component.html',
   styleUrl: './detail.component.css'
 })

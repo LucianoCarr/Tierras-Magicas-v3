@@ -3,17 +3,16 @@ import { CommonModule } from '@angular/common';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { CharacterService } from '../../../../services/character.service';
 import { Character } from '../../../../models/character.model';
-import { HeaderComponent } from "../../../others/header/header.component";
 
 @Component({
   selector: 'app-detail',
-  imports: [CommonModule, RouterModule, HeaderComponent],
+  imports: [CommonModule, RouterModule],
   templateUrl: './detail.component.html',
   styleUrl: './detail.component.css'
 })
 export class DetailComponent implements OnInit {
 
-  character: Character = new Character();
+  Personaje: Character = new Character();
   id: number | null = null;
 
    constructor(
@@ -36,15 +35,15 @@ export class DetailComponent implements OnInit {
             const characterData = Array.isArray(res.Personaje) ? res.Personaje[0] : res.Personaje;
     
             // Asigna los valores al personaje
-            this.character.id = characterData.id;
-            this.character.name = characterData.name;
-            this.character.image = characterData.image;
-            this.character.power = characterData.power;
-            this.character.description = characterData.description;
+            this.Personaje.id = characterData.id;
+            this.Personaje.name = characterData.name;
+            this.Personaje.image = characterData.image;
+            this.Personaje.power = characterData.power;
+            this.Personaje.description = characterData.description;
     
             // Agregar datos adicionales
-            this.character.realm = characterData.realm?.name || 'Desconocido';
-            this.character.element = characterData.elements?.name || 'Ninguno';
+            this.Personaje.realm = characterData.realms?.name || 'Desconocido';
+            this.Personaje.element = characterData.elements?.name || 'Ninguno';
           }
         })
         .catch(error => {

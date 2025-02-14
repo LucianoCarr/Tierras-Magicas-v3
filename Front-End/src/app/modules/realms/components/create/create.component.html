@@ -2,6 +2,7 @@
 
 <form [formGroup]="createForm" class="container">
     <div class="form-row">
+      <!-- NOMBRE -->
       <div class="form-group col-md-6">
         <label for="name">Nombre:  </label>
         <input type="text" class="form-control" id="name" formControlName="name">
@@ -9,6 +10,26 @@
           <small style="color: red; font-size: 22px;">El nombre es obligatorio</small>
         </div>
       </div>
-    </div>
+  <!-- Input para subir imagen -->
+  <div class="form-group">
+    <label for="imageFile">Subir Imagen:</label>
+    <input type="file" class="form-control" id="imageFile" (change)="onFileSelected($event)">
+  </div>
+  <!-- Input para URL de imagen -->
+  <div class="form-group">
+    <label for="imageUrl">O ingresa una URL:</label>
+    <input type="text" class="form-control" id="imageUrl" formControlName="image">
+  </div>
+  <!-- Vista previa de imagen -->
+  <img [src]="imagePreview || createForm.value.image || defaultImage" 
+  alt="Vista previa" style="max-width: 200px; margin-top: 10px; justify-self: center;">
+  
+  <div *ngIf="createForm.controls['image'].invalid && createForm.controls['image'].touched">
+    <small style="color: red;">URL de imagen inválida</small>
+  </div>
       <button type="submit" class="save" (click)="save()">Crear</button>
+</div>
 </form>
+
+
+

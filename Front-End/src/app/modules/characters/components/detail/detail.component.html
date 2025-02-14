@@ -1,23 +1,21 @@
-<h1>Detalles del Personaje</h1>
+<h1>Detalles del Personaje: {{ Personaje.name }}</h1>
 
 <div class="card-header">
-   <!--  <h1>{{ character.name }}</h1>
-    <img class="imgRealm" [src]="character.image" alt="Imagen del reino"> -->
-  </div>
-    <div class="" *ngIf="character">
-      <ul class="card">
-        <li *ngIf="character ">
-          <p>{{ character.name }}</p>
-          <img [src]="'/img/' + character.image" alt="Imagen del personaje">
-          <p>Reino: {{ character.realms?.name || 'Sin reino' }}</p>
-          <p>Poder: {{ character.power }}</p>
-          <p>Elemento: {{ character.element }} </p>
-          <button class="button-custom">Descripción</button>
-          <!-- <p>Descripción: {{character.description}}</p> -->
+  <div class="" *ngIf="Personaje">
+    <ul class="card">
+        <li *ngIf="Personaje ">
+          <img [src]="'/img/' + Personaje.image" alt="Imagen del personaje">
         </li>
+        <div>
+          <p>Reino: {{ Personaje.realm || 'Sin reino' }}</p>
+          <p>Poder: {{ Personaje.power }}</p>
+          <p>Elemento: {{ Personaje.element }} </p>
+        </div>
+        <p class="description">Descripción: {{ Personaje.description }}</p>
       </ul>
     </div>
     <div class="card-button">
       <button class="cancelButton" type="button" [routerLink]="'/character/all'" >Cerrar</button>
     </div>
+  </div>
   
