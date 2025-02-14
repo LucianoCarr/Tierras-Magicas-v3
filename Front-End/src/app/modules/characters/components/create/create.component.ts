@@ -21,7 +21,12 @@ export class CreateComponent {
   createForm:FormGroup;
   realms:Realm[] = [];
   characters: Character[] = [];
-  elements: Element[] = []; 
+  elements: Element[] = [
+    { id: 1, name: 'Agua' },
+    { id: 2, name: 'Tierra' },
+    { id: 3, name: 'Fuego' },
+    { id: 4, name: 'Aire' }
+  ];
   defaultImage = Constants.IMG; // Imagen por defecto
   imagePreview: string | null = null;
   
@@ -38,14 +43,13 @@ export class CreateComponent {
       image: ['', [Validators.pattern(/(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|jpeg|png|gif)/)]], // Validar URL
       realm: [null, Validators.required],
       power: [null, [Validators.required, Validators.min(1)]], // No puede ser 0
-      //element: [null, Validators.required],
+      element: [null, Validators.required],
       description: [''],
    })
 }
 
 ngOnInit(){
   this.getRealms()
-  this.getElements()
 }
 
 getRealms() {
@@ -58,16 +62,6 @@ getRealms() {
   })
 }
 
-getElements() {
-  this.characterService.all()
-    .then(res => {
-      this.elements = res;
-    })
-    .catch(error => {
-      console.error('Error al obtener elementos:', error);
-    });
-}
-
 save() {
   this.createForm.markAllAsTouched();
   if (this.createForm.invalid) return;
@@ -77,9 +71,14 @@ save() {
     this.createForm.patchValue({ image: this.defaultImage });
   }
 
-  console.log('Imagen guardada:', this.createForm.value.image); // Verificar qué se está enviando
+  // Extraer valores del formulario
+  const characterData = { ...this.createForm.value };
 
-  this.characterService.create(this.createForm.value)
+  // Verificar si realm y element son objetos o números
+  characterData.realmId = typeof characterData.realm === 'object' ? characterData.realm.id : characterData.realm;
+  characterData.elementId = typeof characterData.element === 'object' ? characterData.element.id : characterData.element;
+
+  this.characterService.create(characterData)
     .then(() => {
       this.router.navigate(['/character/all']);
     })

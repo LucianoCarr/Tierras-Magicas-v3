@@ -3,6 +3,9 @@ import { CommonModule } from '@angular/common';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { CharacterService } from '../../../../services/character.service';
 import { Character } from '../../../../models/character.model';
+import { Element } from '../../../../models/elements.model';
+import { Realm } from '../../../../models/realms.model';
+import { RealmService } from '../../../../services/realm.service';
 
 @Component({
   selector: 'app-detail',
@@ -13,10 +16,18 @@ import { Character } from '../../../../models/character.model';
 export class DetailComponent implements OnInit {
 
   Personaje: Character = new Character();
+  realms: Realm[] = []
+  elements: Element[] = [
+    { id: 1, name: 'Agua' },
+    { id: 2, name: 'Tierra' },
+    { id: 3, name: 'Fuego' },
+    { id: 4, name: 'Aire' }
+  ]
   id: number | null = null;
 
    constructor(
       private characterService: CharacterService,
+      private realmService: RealmService,
       private activatedRoute:ActivatedRoute,
     ){
       this.id = this.activatedRoute.snapshot.params['id'];
@@ -24,6 +35,7 @@ export class DetailComponent implements OnInit {
     
     ngOnInit(
     ): void {
+      this.getRealms()
       // Traer datos de realm por id`
       if(this.id) this.getDetail(this.id)
     }
@@ -41,13 +53,26 @@ export class DetailComponent implements OnInit {
             this.Personaje.power = characterData.power;
             this.Personaje.description = characterData.description;
     
-            // Agregar datos adicionales
-            this.Personaje.realm = characterData.realms?.name || 'Desconocido';
-            this.Personaje.element = characterData.elements?.name || 'Ninguno';
+            // Buscar el nombre del reino y elemento por ID
+        const realmData = this.realms.find((realm: Realm) => realm.id === characterData.realmId);
+        const elementData = this.elements.find((element: Element) => element.id === characterData.elementId);
+
+        this.Personaje.realm = realmData ? realmData.name : 'Desconocido';
+        this.Personaje.element = elementData ? elementData.name : 'Ninguno';
           }
         })
         .catch(error => {
           console.error('Error al obtener detalles del personaje:', error);
+        });
+    }
+
+    getRealms() {
+      this.realmService.all()
+        .then((res) => {
+          this.realms = res || []; // Asigna los reinos obtenidos al array realms
+        })
+        .catch((error) => {
+          console.error('Error al obtener los reinos:', error);
         });
     }
     

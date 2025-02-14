@@ -17,8 +17,8 @@
               </label>
               <div class="accordion-content">
                 <div class="accordion-atributtes">
-                    <img [src]="'/img/' + character.image" alt="Imagen del personaje" class="character-image">
-                    <div class="atributtes">
+                  <img class="character-image" [src]="character.image && character.image.includes('http') ? character.image : '/img/' + character.image" alt="Imagen del personaje" />
+                  <div class="atributtes">
                         <p>Reino: {{ character.realmName }}</p>
                         <p>Poder: {{ character.power }}</p>
                         <p>Elemento: {{ character.elementName }}</p>

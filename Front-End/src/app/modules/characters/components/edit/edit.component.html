@@ -11,7 +11,7 @@
     </div>
     <!-- IMAGEN -->
     <!-- <label for="image">Imagen:</label> -->
-    <img class="imgChar"  [src]="'/img/' + Personaje.image" alt="Imagen del personaje">
+    <img class="imgChar" [src]="Personaje.image && Personaje.image.includes('http') ? Personaje.image : '/img/' + Personaje.image" alt="Imagen del personaje" />
     <div class="editField">
       <input type="file" (change)="onFileSelected($event)" accept="image/*">
     </div>
@@ -42,12 +42,11 @@
       </select>
     </div>
     <!-- DESCRIPCIÓN -->
-    <div class="editField">
-      <label for="name">Descripcion:  </label>
-      <br>
-      <textarea maxlength="150" name="description" id="description" cols="60" rows="5">{{ Personaje.description }}</textarea>
-    </div>
-
+<div class="editField">
+  <label for="description">Descripción:  </label>
+  <br>
+  <textarea maxlength="150" name="description" id="description" cols="60" rows="5" formControlName="description"></textarea>
+</div>
     <!-- BOTONES -->
     <div class="editButtons">
       <button class="editButton" type="submit" [disabled]="editForm.invalid || !editForm.dirty">Guardar Cambios</button>

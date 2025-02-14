@@ -80,15 +80,25 @@ export class EditComponent implements OnInit {
   updateCharacter() {
     this.editForm.markAllAsTouched();
     if (this.editForm.invalid || !this.id) return;
-
-    this.characterService.edit(this.id, this.editForm.value)
+  
+    const characterData = { ...this.editForm.value };
+  
+    // Convertir IDs correctamente
+    characterData.realmId = Number(characterData.realm);
+    characterData.elementId = Number(characterData.element);
+    delete characterData.realm;
+    delete characterData.element;
+  
+    console.log('Datos a enviar:', characterData);
+  
+    this.characterService.edit(this.id, characterData)
       .then(() => {
         console.log('Personaje actualizado correctamente');
         this.router.navigate(['/character/all']);
       })
       .catch(error => console.error('Error al actualizar el personaje:', error));
   }
-
+  
   getRealms() {
     this.realmService.all()
       .then(res => {

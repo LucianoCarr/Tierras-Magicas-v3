@@ -4,7 +4,8 @@
   <div class="" *ngIf="Personaje">
     <ul class="card">
         <li *ngIf="Personaje ">
-          <img [src]="'/img/' + Personaje.image" alt="Imagen del personaje">
+          <!-- <img [src]="'/img/' + Personaje.image" alt="Imagen del personaje"> -->
+          <img [src]="Personaje.image && Personaje.image.includes('http') ? Personaje.image : '/img/' + Personaje.image" alt="Imagen del personaje" />
         </li>
         <div>
           <p>Reino: {{ Personaje.realm || 'Sin reino' }}</p>

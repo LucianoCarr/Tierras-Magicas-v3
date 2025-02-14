@@ -5,14 +5,21 @@
     <div class="char-card" *ngFor="let character of characters">
       <h2 class="character-name">{{ character.name }}</h2>
       <img class="character-image" [src]="character.image" [alt]="'Imagen de personaje ' + character.name">
+      <p class="character-realm">Reino: {{ character.realms?.name || 'Sin reino' }}</p>
       <p class="character-power">Poder: {{ character.power }}</p>
       <p class="character-element">Elemento: {{ character.elements?.name || 'Desconocido' }}</p>
-      <p class="character-realm">Reino: {{ character.realms?.name || 'Sin reino' }}</p>
       <button class="button-custom">Descripción</button>
       <button [routerLink]="'/character/edit/'+ character.id" class="edit">Editar</button>
       <button [routerLink]="'/character/detail/'+ character.id" class="detail">Ver detalles</button>
-     <!--  <button class="delete">Eliminar</button> -->
+      <button class="delete" (click)="deleteOpen(character)">Eliminar</button>
     </div>
   </div>
 
 
+<!-- ELIMINAR -->
+<app-delete
+[character]="deletecharacter" 
+[isVisible]="deletecharacter !== null" 
+(confirmDeleteEvent)="confirmDelete($event)"
+(closeModal)="deleteClose()">
+</app-delete>

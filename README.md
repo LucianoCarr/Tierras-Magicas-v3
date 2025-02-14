@@ -2,11 +2,10 @@ Version 3. Express manejando la base de datos en un servidor Back-end. Se conect
 
 
 
-//Hacer Header con Navbar y un footer
 //hacer modulo y CRUD de characters
+//Reino y elementos no se estan ligandose a personajes (Como llamar un dato de un modelo de la DB relacionado a otro?)
 
 //Hacer Back de regitro y login
-//Reino y elementos no se estan ligandose a personajes (Como llamar un dato de un modelo de la DB relacionado a otro?)
 
 
 

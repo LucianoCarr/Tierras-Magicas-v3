@@ -3,10 +3,11 @@ import { CharacterService } from '../../../../services/character.service';
 import { Router, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { Character } from '../../../../models/character.model';
+import { DeleteComponent } from '../delete/delete.component';
 
 @Component({
   selector: 'app-all',
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, DeleteComponent],
   templateUrl: './all.component.html',
   styleUrl: './all.component.css'
 })
@@ -14,6 +15,9 @@ import { Character } from '../../../../models/character.model';
 export class AllComponent implements OnInit {
 
   characters: Character[]= []
+
+    deletecharacter: Character | null = null; 
+    deleteModalVisible: boolean = false;
 
   
   constructor(
@@ -47,5 +51,35 @@ export class AllComponent implements OnInit {
       });
   }
   
+   /* ELIMINAR */
+        deleteModal(id: number) {
+          this.characterService.delete(id)
+            .then(res => {
+              this.deletecharacter = res.Personaje;
+            })
+            .catch(error => {
+              console.error('Error al traer el Personaje:', error);
+            });
+        }
+  
+        deleteOpen(character: Character) {
+          this.deletecharacter = character;        // Asigna el Personaje seleccionado
+        }
+      
+        // Cerrar el modal de detalles
+        deleteClose() {
+          this.deletecharacter = null;         // Limpiar el Personaje seleccionado
+        }
+  
+        confirmDelete(id: number) {
+          this.characterService.delete(id)
+            .then(() => {
+              this.characters = this.characters.filter(character => character.id !== id); // Remueve el elemento eliminado
+              this.deleteClose();
+            })
+            .catch(error => {
+              console.error('Error al borrar el Personaje:', error);
+            });
+          }
   
 }
