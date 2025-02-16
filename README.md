@@ -1,12 +1,20 @@
-Version 3. Express manejando la base de datos en un servidor Back-end. Se conecta al Front-end de la mano de Angular, creando las vistas, validaciones y demas con este framework.
+Version 3.
+ 
+Servidor Back-end con express:
+CRUD de Reinos
+CRUD de Personajes
+Registro y Login
+Sesiones abiertas hasta 10 minutos de inactividad
+Validaciones de back
 
-
-
-//hacer modulo y CRUD de characters
-//Reino y elementos no se estan ligandose a personajes (Como llamar un dato de un modelo de la DB relacionado a otro?)
-
-//Hacer Back de regitro y login
-
+Vista Front-end con Angular:
+Vistas de Personajes y reinos
+Mostrar datos de Personajes
+Mostrar datos de Reinos
+Vista de registro y login de usuarios
+Autenticacion y Autorizacion
+Validaciones de front
+Buscador de Reinos y Personajes
 
 
 //VER siguiente clase Autenticacion y Autorizacion (registo y login)

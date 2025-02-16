@@ -9,10 +9,12 @@
     "db:reset": "sequelize db:migrate:undo:all & sequelize db:migrate & sequelize db:seed:all"
   },
   "dependencies": {
+    "connect-session-sequelize": "^7.1.7",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
+    "express-session": "^1.18.1",
     "express-validator": "^7.1.0",
     "http-errors": "^2.0.0",
     "method-override": "^3.0.0",

@@ -5,9 +5,14 @@ const cors = require('cors')
 const path = require('path')
 const methodOverride = require('method-override')
 const createError = require('http-errors')
+const session = require('express-session');
+const SequelizeStore = require('connect-session-sequelize')(session.Store);
+const { sequelize } = require('./database/models'); // Asegúrate de importar tu instancia de Sequelize
+
 
 const characterRouter = require('../src/routers/character.Routes')
 const realmRouter = require('../src/routers/realm.Routes')
+const userRouter = require('../src/routers/user.Routes')
 
 const app = express()
 const port = 5000
@@ -20,6 +25,29 @@ app.use(express.urlencoded({ extended: false}))
 app.use(methodOverride('_method'))
 app.use(cookieParser())
 app.use(express.static(path.join(__dirname + '/../public')))
+
+// Configuración de almacenamiento de sesiones (declarar antes de usar)
+const store = new SequelizeStore({
+  db: sequelize, // Usa la instancia de Sequelize importada arriba
+});
+
+store.sync(); // Sincronizar almacenamiento de sesiones
+
+// Configuración de sesiones
+app.use(session({
+  secret: process.env.SESSION_SECRET || 'login123',
+  resave: false,
+  saveUninitialized: false,
+  store: store, // Aquí ya está declarado
+  cookie: {
+    maxAge: 10 * 60 * 1000, // 10 minutos
+    secure: false, // Cambia a true si usas HTTPS
+    httpOnly: true
+  }
+}));
+
+// Sincronizar almacenamiento de sesiones
+store.sync();
 
 //Conexcion con el front-end de angular
 app.use(cors({
@@ -35,6 +63,7 @@ app.get('/', (req, res) => {
   
 app.use('/character', characterRouter)
 app.use('/realm', realmRouter)
+app.use('/user', userRouter)
 
 
 //errores
