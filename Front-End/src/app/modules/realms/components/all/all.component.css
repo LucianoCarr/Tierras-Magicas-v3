@@ -2,13 +2,8 @@
     font-size: 40px;
     text-decoration-line: underline;
     justify-self: center;
+    margin-bottom: 10px;
 }
-
-/* LISTA */
-/* .cardBody {
-    background-image: url(../../../../../../public/img/papel_de_pergamino-transformed.jpeg);
-    background-size: contain;
-} */
 
 .card {
     border: 1px solid black;
@@ -123,3 +118,53 @@
     transform: translateY(-2px);
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
   } 
+
+
+  /* BOTON SUBIR AL CIELO */
+.sky-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: white;
+  color: #333;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  isolation: isolate;
+  overflow: hidden;
+}
+
+/* Esquinas coloreadas */
+.sky-button::before,
+.sky-button::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(45deg, deepskyblue, dodgerblue);
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+
+.sky-button::before {
+  top: 0;
+  left: 0;
+}
+
+.sky-button::after {
+  bottom: 0;
+  right: 0;
+  transform: rotate(180deg);
+}
+
+/* Efecto hover - Elevación */
+.sky-button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+

@@ -1,3 +1,44 @@
+.deleteRealm {
+  text-decoration: underline;
+  font-size: 32px;
+}
+
+.deleteName {
+  font-size: 25px;
+  margin: 6px 0px;
+}
+
+img {
+  border-width: 4px 5px 3px 3px;
+  justify-self: center;
+}
+
+.deleteButtons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.deleteConfirm {
+  background-color: red;
+  font-size: 18px;
+  padding: 0px 22px;
+  color: white;
+  margin-top: 10px;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+.deleteCancel {
+  background-color: darkgrey;
+  font-size: 18px;
+  padding: 0px 22px;
+  color: white;
+  margin-top: 10px;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+/* MODAL */
 .modal-overlay {
     position: fixed;
     top: 0; left: 0;

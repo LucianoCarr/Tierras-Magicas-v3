@@ -8,12 +8,20 @@
       <p class="character-realm">Reino: {{ character.realms?.name || 'Sin reino' }}</p>
       <p class="character-power">Poder: {{ character.power }}</p>
       <p class="character-element">Elemento: {{ character.elements?.name || 'Desconocido' }}</p>
-      <button class="button-custom">Descripción</button>
-      <button [routerLink]="'/character/edit/'+ character.id" class="edit">Editar</button>
-      <button [routerLink]="'/character/detail/'+ character.id" class="detail">Ver detalles</button>
-      <button class="delete" (click)="deleteOpen(character)">Eliminar</button>
+      <div class="dropdown" (click)="$event.stopPropagation()">
+        <button class="dropdown-btn" (click)="toggleMenu(character.id)">Opciones</button>
+        <div class="dropdown-menu" *ngIf="openMenuId === character.id">
+          <button class="edit" [routerLink]="'/character/edit/'+ character.id">Editar</button>
+          <button class="detail" [routerLink]="'/character/detail/'+ character.id">Ver detalles</button>
+          <button class="delete" (click)="deleteOpen(character)">Eliminar</button>
+        </div>
+      </div>
     </div>
   </div>
+  <button class="sky-button" (click)="scrollToTop()">☁️ Subir</button>
+
+
+
 
 
 <!-- ELIMINAR -->

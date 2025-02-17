@@ -79,4 +79,10 @@ export class AllComponent implements OnInit {
             console.error('Error al borrar el reino:', error);
           });
         }
+
+           /* BOTON SUBIR ARRIBA */
+          scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }
+          
   }

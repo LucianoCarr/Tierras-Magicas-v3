@@ -17,7 +17,7 @@
     </div>
     <!-- REINO -->
     <div class="editField">
-      <label for="realm">Reino:</label>
+      <label for="realm">Reino: </label>
       <select id="realm" formControlName="realm">
         <option *ngFor="let realm of realms" [value]="realm.id">
           {{ realm.name }}
@@ -27,14 +27,14 @@
     <!-- PODER -->
     <div class="editField">
       <label for="power">Poder: </label>
-      <input id="power" type="number" formControlName="power" required>
+      <input id="power" type="text" formControlName="power" required>
       <div *ngIf="editForm.controls['power'].invalid && editForm.controls['power'].touched">
         <small style="color: red;">El poder es obligatorio</small>
       </div>
     </div>
     <!-- ELEMENTO -->
     <div class="editField">
-      <label>Elemento:</label>
+      <label>Elemento: </label>
       <select id="element" class="form-control" formControlName="element">
         <option *ngFor="let element of elements" [value]="element.id" [selected]="element.name === Personaje.element">
           {{ element.name }}

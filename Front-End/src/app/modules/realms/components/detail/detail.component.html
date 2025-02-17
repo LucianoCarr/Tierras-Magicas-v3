@@ -6,12 +6,10 @@
     <ul class="card">
       <li *ngFor="let character of realm.characters">
         <p>{{ character.name }}</p>
-        <img [src]="'/img/' + character.image" alt="Imagen del personaje">
+        <img class="charIMG" [src]="character.image && character.image.includes('http') ? character.image : '/img/' + character.image" alt="Imagen del personaje" />
         <p>Poder: {{ character.power }}</p>
         <p>Elemento: {{ character.elementName }} </p>
-        <button class="button-custom">Descripción</button>
-        <!-- <p>Descripción: {{character.description}}</p> -->
-         <!-- - Reino {{ character.realmName }} -->
+        <button class="button-custom" [routerLink]="'/character/detail/'+ character.id">Descripción</button>
       </li>
     </ul>
   </div>

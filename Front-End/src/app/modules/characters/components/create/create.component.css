@@ -31,21 +31,25 @@ label {
 input#name {
     border: 1px solid black;
     border-radius: 8px;
+    padding-left: 6px;
 }
 
 input#power {
     border: 1px solid black;
     border-radius: 8px;
+    padding-left: 6px;
 }
 
 input#imageUrl {
     border: 1px solid black;
     border-radius: 8px;
+    padding-left: 6px;
 }
 
 select {
     border: 1px solid black;
     border-radius: 8px;
+    padding: 1px 10px;
 }
 
 textarea {

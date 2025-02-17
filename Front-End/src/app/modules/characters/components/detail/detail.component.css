@@ -1,11 +1,26 @@
-/* personajes */
+.CharName {
+  font-size: 40px;
+  text-decoration-line: underline;
+  justify-self: center;
+  text-align: center;
+}
+
+.charTittle {
+  font-size: 20px;
+  text-decoration: underline;
+}
+
 .card {
     /* border: 1px solid black; */
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
     align-items: center;
     margin: 40px 0px;
+}
+
+.charIMG {
+    height: 240px;
 }
 
 ul {
@@ -25,9 +40,10 @@ li {
 p {
     justify-self: center;
     text-align: center;
-    font-size: 14px;
+    font-size: 18px;
     font-weight: bold;
 }
+
 
 /* botones */
 .card-button {
@@ -54,48 +70,3 @@ p {
     border-radius: 8px;
     color: white;
 }
-
-/* DESCRPCION BOTON */
-.button-custom {
-    background: white;
-    color: #333;
-    font-size: 14px;
-    font-weight: bold;
-    padding: 2px 14px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    isolation: isolate;
-  }
-  
-  /* Esquinas coloreadas en forma triangular */
-  .button-custom::before,
-  .button-custom::after {
-    content: "";
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background: linear-gradient(45deg, #d54dff, #d54dff);
-    clip-path: polygon(0 0, 100% 0, 0 100%);
-  }
-  
-  .button-custom::before {
-    top: 0;
-    left: 0;
-  }
-  
-  .button-custom::after {
-    bottom: 0;
-    right: 0;
-    transform: rotate(180deg);
-  }
-  
-  /* Efecto hover */
-/*   .button-custom:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
-  } */

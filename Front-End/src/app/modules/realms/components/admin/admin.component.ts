@@ -55,4 +55,10 @@ export class AdminComponent implements OnInit {
         console.error('Error al obtener los reinos:', error);
       });
     }
+
+       /* BOTON SUBIR ARRIBA */
+      scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+      
 }

@@ -19,11 +19,11 @@
                 <div class="accordion-atributtes">
                   <img class="character-image" [src]="character.image && character.image.includes('http') ? character.image : '/img/' + character.image" alt="Imagen del personaje" />
                   <div class="atributtes">
-                        <p>Reino: {{ character.realmName }}</p>
-                        <p>Poder: {{ character.power }}</p>
-                        <p>Elemento: {{ character.elementName }}</p>
+                        <p><b>Reino:</b> {{ character.realmName }}</p>
+                        <p><b>Poder:</b> {{ character.power }}</p>
+                        <p><b>Elemento:</b> {{ character.elementName }}</p>
                     </div>
-                    <p class="description">Descripción: {{ character.description }}</p>
+                    <p class="description"><b></b> {{ character.description }}</p>
                 </div>
             </div>
             </div>
@@ -33,4 +33,6 @@
       </div>
     </div>
   </div>
+
+  <button class="sky-button" (click)="scrollToTop()">☁️ Subir</button>
   

@@ -1,18 +1,17 @@
-<h1>Detalles del Personaje: {{ Personaje.name }}</h1>
+<h1 class="CharName">Detalles del Personaje <br>{{ Personaje.name }}</h1>
 
 <div class="card-header">
   <div class="" *ngIf="Personaje">
     <ul class="card">
-        <li *ngIf="Personaje ">
-          <!-- <img [src]="'/img/' + Personaje.image" alt="Imagen del personaje"> -->
-          <img [src]="Personaje.image && Personaje.image.includes('http') ? Personaje.image : '/img/' + Personaje.image" alt="Imagen del personaje" />
-        </li>
-        <div>
-          <p>Reino: {{ Personaje.realm || 'Sin reino' }}</p>
-          <p>Poder: {{ Personaje.power }}</p>
-          <p>Elemento: {{ Personaje.element }} </p>
-        </div>
-        <p class="description">Descripción: {{ Personaje.description }}</p>
+      <div>
+        <p class="charText"><b class="charTittle">Reino:</b> {{ Personaje.realm || 'Sin reino' }}</p>
+        <p class="charText"><b class="charTittle">Poder:</b> {{ Personaje.power }}</p>
+        <p class="charText"><b class="charTittle">Elemento:</b> {{ Personaje.element }} </p>
+      </div>
+      <li *ngIf="Personaje ">
+        <img class="charIMG" [src]="Personaje.image && Personaje.image.includes('http') ? Personaje.image : '/img/' + Personaje.image" alt="Imagen del personaje" />
+      </li>
+        <p class="description"><b class="charTittle">Descripción:</b> {{ Personaje.description }}</p>
       </ul>
     </div>
     <div class="card-button">

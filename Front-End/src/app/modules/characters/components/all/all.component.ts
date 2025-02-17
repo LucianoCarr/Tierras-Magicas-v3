@@ -4,6 +4,7 @@ import { Router, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { Character } from '../../../../models/character.model';
 import { DeleteComponent } from '../delete/delete.component';
+import { HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-all',
@@ -19,6 +20,7 @@ export class AllComponent implements OnInit {
     deletecharacter: Character | null = null; 
     deleteModalVisible: boolean = false;
 
+    openMenuId: number | null = null;
   
   constructor(
     private characterService: CharacterService,
@@ -81,5 +83,23 @@ export class AllComponent implements OnInit {
               console.error('Error al borrar el Personaje:', error);
             });
           }
+
+
+          /* MENU DESPLEGABLE */
+          toggleMenu(characterId: number) {
+            this.openMenuId = this.openMenuId === characterId ? null : characterId;
+          }
+          
+          // Cerrar el menú si se hace clic fuera
+          @HostListener('document:click')
+          closeMenu() {
+            this.openMenuId = null;
+          }
+
+          /* BOTON SUBIR ARRIBA */
+          scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }
+          
   
 }

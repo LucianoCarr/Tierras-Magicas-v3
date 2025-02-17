@@ -40,8 +40,108 @@
  
  
  
- /* DESCRPCION BOTON */
-.button-custom {
+ /* BOTONES */
+.edit {
+  background-color: greenyellow;
+  align-self: center;
+  font-size: 26px;
+  border-radius: 10%;
+  padding: 6px;
+  font-weight: 400;
+}
+
+.detail {
+  background-color: royalblue;
+  align-self: center;
+  font-size: 26px;
+  border-radius: 10%;
+  padding: 6px;
+  font-weight: 400;
+}
+
+.delete {
+  background-color: orangered;
+  align-self: center;
+  font-size: 26px;
+  border-radius: 10%;
+  padding: 6px;
+  font-weight: 400;
+}
+
+/* DESCRPCION BOTON */
+.delete, .edit, .detail {
+  background: white;
+  color: #333;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 4px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  isolation: isolate;
+}
+
+/* Esquinas coloreadas en forma triangular */
+.delete::before, .edit::before, .detail::before,
+.delete::after, .edit::after, .detail::after  {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(45deg, orangered, orangered);
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+
+.edit::before,
+.edit::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(45deg, greenyellow, greenyellow);
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+
+.detail::before,
+.detail::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(45deg, royalblue, royalblue);
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+
+
+.delete::before, .edit::before, .detail::before {
+  top: 0;
+  left: 0;
+}
+
+.delete::after, .edit::after, .detail::after {
+  bottom: 0;
+  right: 0;
+  transform: rotate(180deg);
+}
+
+/* Efecto hover */
+.delete:hover, .edit:hover, .detail:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+} 
+
+/* MENU DESPLEGABLE */
+.dropdown {
+  position: relative;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.dropdown-btn {
   background: white;
   color: #333;
   font-size: 14px;
@@ -57,9 +157,9 @@
   isolation: isolate;
 }
 
-/* Esquinas coloreadas en forma triangular */
-.button-custom::before,
-.button-custom::after {
+/* Esquinas coloreadas */
+.dropdown-btn::before,
+.dropdown-btn::after {
   content: "";
   position: absolute;
   width: 20px;
@@ -68,69 +168,83 @@
   clip-path: polygon(0 0, 100% 0, 0 100%);
 }
 
-.button-custom::before {
+.dropdown-btn::before {
   top: 0;
   left: 0;
 }
 
-.button-custom::after {
+.dropdown-btn::after {
   bottom: 0;
   right: 0;
   transform: rotate(180deg);
 }
 
-/* Efecto hover */
-/*   .button-custom:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
-} */
-
- 
- 
- 
- 
- 
- 
- 
- /* NAVBAR */
- .navbar {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 10px;
-    margin: 10px 0px;
-    /* background-color: rgba(153, 50, 204, 0.589); */
-    /*  background-color: #c7cacb; */
-    background-color: #f1f1f1;
-    border-bottom: 2px solid black;
-  }
-
-  .routes {
-    font-size: 18px;
-    font-weight: bolder;
-    font-family: math;
-    cursor: pointer;
-    align-content: center;
-  }
-  
-  .search {
-    justify-content: space-between;
-    padding: 3px 6px;
-    transition: all 0.1s;
-    background-color: darkcyan;
-    border-radius: 15px;
-  }
-  
-  .search:hover {
-      box-shadow: 0px 0px 20px #202553;
-  }
-
-.search input {
-    background-color: transparent;
-    border: none;
-    flex-grow: 1;
-    color: #fafafa;
-    outline: none;
-    font-size: 16px;
-    font-family: math
+/* Estilos del menú desplegable */
+.dropdown-menu {
+  position: absolute;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 5px;
+  width: 140px;
 }
+
+.dropdown-menu button {
+  margin: 5px 0;
+  width: 100%;
+}
+
+
+/* BOTON SUBIR AL CIELO */
+.sky-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: white;
+  color: #333;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  isolation: isolate;
+  overflow: hidden;
+}
+
+/* Esquinas coloreadas */
+.sky-button::before,
+.sky-button::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(45deg, deepskyblue, dodgerblue);
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+
+.sky-button::before {
+  top: 0;
+  left: 0;
+}
+
+.sky-button::after {
+  bottom: 0;
+  right: 0;
+  transform: rotate(180deg);
+}
+
+/* Efecto hover - Elevación */
+.sky-button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
 
