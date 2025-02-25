@@ -23,7 +23,19 @@ form {
 input#name {
     border: 1px solid black;
     border-radius: 8px;
+    padding-left: 6px;
 }
+
+input#imageFile {
+    font-size: 20px;
+}
+
+input#imageUrl {
+    border: 1px solid black;
+    border-radius: 8px;
+    padding-left: 6px;
+}
+
 
 input#power {
     border: 1px solid black;
@@ -60,19 +72,21 @@ textarea {
 .editButton {
     background-color: greenyellow;
     font-size: 18px;
-    padding: 0px 22px;
+    padding: 4px 22px;
     color: white;
     margin-top: 10px;
     font-weight: bold;
     border-radius: 8px;
+    cursor: pointer;
 }
 
 .cancelButton {
     background-color: darkgrey;
     font-size: 18px;
     font-weight: bold;
-    padding: 0px 22px;
+    padding: 4px 22px;
     margin-top: 10px;
     border-radius: 8px;
     color: white;
+    cursor: pointer;
 }

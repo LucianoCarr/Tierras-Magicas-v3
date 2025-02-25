@@ -21,6 +21,7 @@
 
 .charIMG {
     height: 240px;
+    object-fit: contain;
 }
 
 ul {

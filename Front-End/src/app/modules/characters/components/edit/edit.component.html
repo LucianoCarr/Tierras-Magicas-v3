@@ -10,10 +10,19 @@
       </div>
     </div>
     <!-- IMAGEN -->
-    <!-- <label for="image">Imagen:</label> -->
-    <img class="imgChar" [src]="Personaje.image && Personaje.image.includes('http') ? Personaje.image : '/img/' + Personaje.image" alt="Imagen del personaje" />
     <div class="editField">
-      <input type="file" (change)="onFileSelected($event)" accept="image/*">
+      <label>Imagen:</label>
+      <img class="imgChar" [src]="imagePreview || editForm.value.image || Personaje.image || defaultImage" [alt]="'Imagen del reino ' + Personaje.name" style="max-width: 200px; margin-top: 10px;">
+    </div>
+    <!-- Subir imagen -->
+    <div class="editField">
+      <label>Subir Imagen: </label>
+      <input type="file" class="form-control" id="imageFile" (change)="onFileSelected($event)" accept="image/*">
+    </div>
+    <!-- Ingresar URL de imagen -->
+    <div class="editField">
+      <label for="imageUrl">O ingresa una URL: </label> 
+      <input type="text" class="form-control" id="imageUrl" formControlName="image" [value]="editForm.value.image || Personaje.image || defaultImage">
     </div>
     <!-- REINO -->
     <div class="editField">

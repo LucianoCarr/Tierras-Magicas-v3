@@ -11,8 +11,6 @@
     justify-content: space-between;
     padding: 20px 10px;
     margin: 10px 0px;
-    /* background-color: rgba(153, 50, 204, 0.589); */
-    /*  background-color: #c7cacb; */
     background-color: #f1f1f1;
     border-bottom: 2px solid black;
   }
@@ -25,25 +23,4 @@
     align-content: center;
   }
   
-  .search {
-    justify-content: space-between;
-    padding: 3px 6px;
-    transition: all 0.1s;
-    background-color: darkcyan;
-    border-radius: 15px;
-  }
-  
-  .search:hover {
-      box-shadow: 0px 0px 20px #202553;
-  }
-
-.search input {
-    background-color: transparent;
-    border: none;
-    flex-grow: 1;
-    color: #fafafa;
-    outline: none;
-    font-size: 16px;
-    font-family: math
-}
 

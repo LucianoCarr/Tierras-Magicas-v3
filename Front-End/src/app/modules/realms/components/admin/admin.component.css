@@ -1,132 +1,84 @@
 h1 {
-    font-size: 40px;
-    text-decoration-line: underline;
-    justify-self: center;
-    margin-bottom: 10px;
+  font-size: 40px;
+  text-decoration-line: underline;
+  justify-self: center;
+  margin-bottom: 10px;
 }
 
 ul {
-    display: flex;
+  display: flex;
 }
 
 li {
-    border: 1px solid black;
-    width: 130px;
+  border: 1px solid black;
+  width: 130px;
 }
 
 .adminImg {
-    min-height: 80px;
-    max-width: 100px;
-    mix-blend-mode: color-burn;
+  min-height: 80px;
+  max-width: 100px;
+  mix-blend-mode: color-burn;
 }
 
 
 /* ACORDION */
 .accordion {
-    width: 95%;
-    justify-self: center;
-  }
-  
-  .accordion-item {
-    border: 2px solid black;
-    margin-bottom: 5px;
-  }
-  
-  .accordion-toggle {
-    display: none;
-  }
-  
-  .accordion-header {
-    display: block;
-    padding: 10px;
-    background: #f1f1f1;
-    cursor: pointer;
-    font-weight: bold;
-    border-bottom: 2px solid black;
-  }
-  
-  .accordion-content {
-    display: none;
-    padding: 10px;
-  }
-  
-  .accordion-toggle:checked + .accordion-header + .accordion-content {
-    display: block;
-  }
-  
-  /* Estilos específicos para personajes */
-  .character-header {
-    background: #ddd;
-    padding-left: 20px;
-  }
-  
-  .character-image {
-    width: 100px;
-    height: auto;
-    display: block;
-    margin: 10px 0;
-  }
+  width: 95%;
+  justify-self: center;
+}
 
-  .accordion-atributtes {
-        display: flex;
-        justify-content: space-between;
-        font-weight: bold;
-  }
-  
-  .atributtes {
-    align-content: center;
-  }
+.accordion-item {
+  border: 2px solid black;
+  margin-bottom: 5px;
+}
 
-  .description {
-    width: 30%;
-    align-content: center;
-  }
+.accordion-toggle {
+  display: none;
+}
 
-
-  /* BOTON SUBIR AL CIELO */
-.sky-button {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: white;
-  color: #333;
-  font-size: 16px;
-  font-weight: bold;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 8px;
+.accordion-header {
+  display: block;
+  padding: 10px;
+  background: #f1f1f1;
   cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  isolation: isolate;
-  overflow: hidden;
+  font-weight: bold;
+  border-bottom: 2px solid black;
 }
 
-/* Esquinas coloreadas */
-.sky-button::before,
-.sky-button::after {
-  content: "";
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  background: linear-gradient(45deg, deepskyblue, dodgerblue);
-  clip-path: polygon(0 0, 100% 0, 0 100%);
+.accordion-content {
+  display: none;
+  padding: 10px;
 }
 
-.sky-button::before {
-  top: 0;
-  left: 0;
+.accordion-toggle:checked + .accordion-header + .accordion-content {
+  display: block;
 }
 
-.sky-button::after {
-  bottom: 0;
-  right: 0;
-  transform: rotate(180deg);
+/* Estilos específicos para personajes */
+.character-header {
+  background: #ddd;
+  padding-left: 20px;
 }
 
-/* Efecto hover - Elevación */
-.sky-button:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+.character-image {
+  width: 100px;
+  height: auto;
+  display: block;
+  margin: 10px 0;
+}
+
+.accordion-atributtes {
+      display: flex;
+      justify-content: space-between;
+      font-weight: bold;
+}
+
+.atributtes {
+  align-content: center;
+}
+
+.description {
+  width: 30%;
+  align-content: center;
 }
 

@@ -13,6 +13,7 @@ const { sequelize } = require('./database/models'); // Asegúrate de importar tu
 const characterRouter = require('../src/routers/character.Routes')
 const realmRouter = require('../src/routers/realm.Routes')
 const userRouter = require('../src/routers/user.Routes')
+const searchRouter = require('../src/routers/search.Routes')
 
 const app = express()
 const port = 5000
@@ -64,6 +65,7 @@ app.get('/', (req, res) => {
 app.use('/character', characterRouter)
 app.use('/realm', realmRouter)
 app.use('/user', userRouter)
+app.use('/search', searchRouter)
 
 
 //errores

@@ -7,6 +7,7 @@ import { Character } from '../../../../models/character.model';
 import { RealmService } from '../../../../services/realm.service';
 import { Realm } from '../../../../models/realms.model';
 import { Element } from '../../../../models/elements.model';
+import { Constants } from '../../../../../app.settings';
 
 @Component({
   selector: 'app-edit',
@@ -27,7 +28,8 @@ export class EditComponent implements OnInit {
   ];
   id: number | null = null;
   editForm: FormGroup;
-  imagePreview: string | null = null; // Para vista previa
+  imagePreview: string | null = null;
+  defaultImage = Constants.IMG;
 
   constructor(
     private fb: FormBuilder,
@@ -36,20 +38,55 @@ export class EditComponent implements OnInit {
     private activatedRoute: ActivatedRoute,
     private router: Router,
   ) {
-    this.id = this.activatedRoute.snapshot.params['id'];
+    /* this.activatedRoute.snapshot.queryParams['search']; */  // trae info de querys -> ruta?search=text
+
+    /**
+     * 
+     * DESDE EL TEMPLATE
+     <a [routerLink]="['/productos']" [queryParams]="{ id: 123, categoria: 'electronica' }">
+      Ver producto
+      </a>
+
+      DESDE EL Component
+      this.router.navigate(['/productos'], { 
+        queryParams: { id: 123, categoria: 'electronica', productos:'loquesea' }
+      });
+      http://tusitio.com/productos?id=123&categoria=electronica&productos=loquesea
+
+      const id = this.activatedRoute.snapshot.queryParams['id'];
+      const categoria  = this.activatedRoute.snapshot.queryParams['categoria'];
+      const prodcutos  = this.activatedRoute.snapshot.queryParams['productos'];
+      search(){
+        const searchValue = this.form.value;
+        this.router.navigate(['/productos'], { 
+          queryParams: { search: searchValue }
+        });
+      }
+     */
+    
+      
+      
+      
+    this.id = this.activatedRoute.snapshot.params['id']; // trae info de los params -> route ruta/:param  
     this.editForm = this.fb.group({
       name: ['', Validators.required],
+      image: ['', [this.validarImagen]],
       realm: [null, Validators.required],
       power: [null, [Validators.required, Validators.min(1)]],
       element: [null, Validators.required],
       description: [''],
-      image: ['']
     });
   }
 
   ngOnInit(): void {
     this.getRealms();
     if (this.id) this.getEdit(this.id);
+  }
+
+  ngOnChanges() {
+    if (this.Personaje) {
+      this.editForm.patchValue({ name: this.Personaje.name });
+    }
   }
 
   getEdit(id: number) {
@@ -59,14 +96,14 @@ export class EditComponent implements OnInit {
           const characterData = Array.isArray(res.Personaje) ? res.Personaje[0] : res.Personaje;
 
           this.Personaje = characterData; // Guardar el personaje completo
-          this.imagePreview = characterData.image; // Asignar imagen
+          this.imagePreview = characterData.image || this.defaultImage; // Asignar imagen
           this.Personaje.realm = characterData.realms?.name || 'Desconocido';
           this.Personaje.element = characterData.elements?.name || 'Ninguno';
 
           // Poblar el formulario con los datos obtenidos
           this.editForm.patchValue({
             name: characterData.name || '',
-            image: characterData.image || '',
+            image: characterData.image || this.defaultImage,
             realm: characterData.realmId || null,  // Usar realmId en lugar de realms
             power: characterData.power || 1,
             element: characterData.elementId || null,  // Usar elementId en lugar de elements
@@ -78,8 +115,11 @@ export class EditComponent implements OnInit {
   }
 
   updateCharacter() {
-    this.editForm.markAllAsTouched();
-    if (this.editForm.invalid || !this.id) return;
+    if (this.editForm.valid && this.id) {
+      // Si la URL de la imagen está vacía, se debe asignar la imagen predeterminada
+      if (!this.editForm.value.image) {
+        this.editForm.patchValue({ image: this.defaultImage });
+      }
   
     const characterData = { ...this.editForm.value };
   
@@ -89,15 +129,13 @@ export class EditComponent implements OnInit {
     delete characterData.realm;
     delete characterData.element;
   
-    console.log('Datos a enviar:', characterData);
-  
     this.characterService.edit(this.id, characterData)
       .then(() => {
-        console.log('Personaje actualizado correctamente');
         this.router.navigate(['/character/all']);
       })
       .catch(error => console.error('Error al actualizar el personaje:', error));
   }
+}
   
   getRealms() {
     this.realmService.all()
@@ -124,7 +162,14 @@ export class EditComponent implements OnInit {
     reader.readAsDataURL(file);
   }
 
-  onImageError() {
-    this.imagePreview = '/img/default.jpg';
+  /* VALIDAR IMAGEN */
+  validarImagen(control: any) {
+    const urlPattern = /^(http|https):\/\/.*\.(jpg|jpeg|png|gif|webp)(\?.*)?$|^(http|https):\/\/.*$/i;
+    const base64Pattern = /^data:image\/(png|jpg|jpeg|gif|webp);base64,/;
+  
+    if (!control.value || urlPattern.test(control.value) || base64Pattern.test(control.value)) {
+      return null; // ✅ Es válida
+    }
+    return { invalidImage: true }; // ❌ No es válida
   }
 }

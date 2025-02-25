@@ -2,6 +2,7 @@
 
 <div *ngIf="realm" class="card">
   <form [formGroup]="editForm" (ngSubmit)="updateRealm()">
+    <!-- NOMBRE -->
     <div class="editField">
       <label for="name">Editar Nombre: </label>
       <input class="name" id="name" type="text" formControlName="name" required>
@@ -9,7 +10,22 @@
         <small style="color: red;">El nombre es obligatorio</small>
       </div>
     </div>
-    <img class="imgRealm" *ngIf="realm.image" [src]="realm.image" alt="Imagen del reino">
+    <!-- IMAGEN -->
+    <div class="editField">
+      <label for="image">Imagen:</label>
+      <img class="allimg" [src]="imagePreview || editForm.value.image || realm.image || defaultImage" [alt]="'Imagen del reino ' + realm.name" style="max-width: 200px; margin-top: 10px;">
+    </div>
+    <!-- Subir Imagen -->
+    <div class="editField">
+      <label for="imageFile">Subir Imagen: </label>
+      <input type="file" class="form-control" id="imageFile" (change)="onFileSelected($event)">
+    </div>
+    <!-- Input para URL de imagen -->
+    <div class="editField">
+      <label for="imageUrl">O ingresa una URL: </label>
+      <input type="text" class="form-control" id="imageUrl" formControlName="image" [value]="editForm.value.image || realm.image || defaultImage">
+    </div>
+<!-- botones -->
     <div class="editButtons">
       <button class="editButton" type="submit" [disabled]="editForm.invalid || !editForm.dirty">Guardar Cambios</button>
       <button class="cancelButton" type="button" [routerLink]="'/realm/all'">Cancelar</button>

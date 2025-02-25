@@ -5,10 +5,11 @@ import { CommonModule } from '@angular/common';
 import { Character } from '../../../../models/character.model';
 import { DeleteComponent } from '../delete/delete.component';
 import { HostListener } from '@angular/core';
+import { SkyButtonComponent } from "../../../others/sky-button/sky-button.component";
 
 @Component({
   selector: 'app-all',
-  imports: [CommonModule, RouterModule, DeleteComponent],
+  imports: [CommonModule, RouterModule, DeleteComponent, SkyButtonComponent],
   templateUrl: './all.component.html',
   styleUrl: './all.component.css'
 })
@@ -84,7 +85,6 @@ export class AllComponent implements OnInit {
             });
           }
 
-
           /* MENU DESPLEGABLE */
           toggleMenu(characterId: number) {
             this.openMenuId = this.openMenuId === characterId ? null : characterId;
@@ -95,11 +95,4 @@ export class AllComponent implements OnInit {
           closeMenu() {
             this.openMenuId = null;
           }
-
-          /* BOTON SUBIR ARRIBA */
-          scrollToTop() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-          }
-          
-  
 }

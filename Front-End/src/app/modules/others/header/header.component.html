@@ -4,11 +4,10 @@
     <h2 class="routes" [routerLink]="'/realm/create'">Agregar Reino</h2>
     <h2 class="routes" [routerLink]="'/character/all'">Ver Personajes</h2>
     <h2 class="routes" [routerLink]="'/realm/all'">Ver Reinos</h2>
-    <form class="header-form" id="form-search">
-      <div class="search">
-        <input type="text" name="keywords" id="search" placeholder="Buscar">
-        <button type="submit"><i class="fas fa-search"></i></button>
-      </div>
-    </form>
-    <h2 class="routes" [routerLink]="'/realm/admin'">Usuario <i class="fa-solid fa-user"></i></h2>
+    <h2 class="routes" [routerLink]="'/search'">Buscar</h2>
+   <!--  <form class="header-form" id="form-search">
+    <app-search></app-search>
+    </form> -->
+    <h2 class="routes" [routerLink]="'/user/login'">Login</h2>
+    <h2 class="routes" [routerLink]="'/realm/admin'">Adminisrador <i class="fa-solid fa-user"></i></h2>
   </nav>

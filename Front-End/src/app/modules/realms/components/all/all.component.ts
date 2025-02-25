@@ -5,13 +5,14 @@ import { Realm } from '../../../../models/realms.model';
 import { RouterModule } from '@angular/router';
 import { DeleteComponent } from '../delete/delete.component';
 import { Router } from '@angular/router';
+import { SkyButtonComponent } from "../../../others/sky-button/sky-button.component";
 
 //PARA CREAR EL COMPONENTE EN ESTA CARPETA
 //ng g c modules/realms/components/all
 
 @Component({
   selector: 'app-all',
-  imports: [CommonModule, RouterModule, DeleteComponent],
+  imports: [CommonModule, RouterModule, DeleteComponent, SkyButtonComponent],
   templateUrl: './all.component.html',
   styleUrl: './all.component.css'
 })
@@ -79,10 +80,4 @@ export class AllComponent implements OnInit {
             console.error('Error al borrar el reino:', error);
           });
         }
-
-           /* BOTON SUBIR ARRIBA */
-          scrollToTop() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-          }
-          
   }

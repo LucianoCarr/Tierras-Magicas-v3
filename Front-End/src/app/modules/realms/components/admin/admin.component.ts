@@ -2,10 +2,11 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { CharacterPerRealm } from '../../../../models/realms.model';
 import { RealmService } from '../../../../services/realm.service';
+import { SkyButtonComponent } from "../../../others/sky-button/sky-button.component";
 
 @Component({
   selector: 'app-admin',
-  imports: [CommonModule],
+  imports: [CommonModule, SkyButtonComponent],
   templateUrl: './admin.component.html',
   styleUrl: './admin.component.css'
 })
@@ -20,22 +21,6 @@ export class AdminComponent implements OnInit {
     this.CharacterPerRealm();
   }
 
-  //SIMPLE
- /*  CharacterPerRealm() {
-    this.realmService.admin()
-    .then(res => {
-      if (res && res.Reino) {
-        this.realmPerCharacter = res.Reino; // Asignamos directamente porque ya coincide con la clase
-      }
-    })
-    .catch(error=> {
-      //manejar error
-        console.error('Error al obtener los reinos:', error)
-    })
-  } */
-
-
-    
   //CON NOMBRE DE REINO Y ELEMENTO
   CharacterPerRealm() {
     this.realmService.admin()

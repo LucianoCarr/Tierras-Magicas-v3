@@ -1,0 +1,49 @@
+<div class="search">
+  <input type="text" [(ngModel)]="searchTerm" (input)="search()" placeholder="Buscar Reinos o Personajes">
+  <button type="button"><i class="fas fa-search"></i></button>
+</div>
+
+<!-- Ocultar la imagen por defecto cuando hay algo escrito en el buscador -->
+<img class="defaultImage" *ngIf="!searchTerm && filteredRealms.length === 0 && filteredCharacters.length === 0" [src]="defaultImage" alt="">
+
+<!-- Sección de resultados -->
+<div class="results">
+  <!-- Mostrar Reinos -->
+  <div *ngIf="filteredRealms.length > 0 else noRealmResults" >
+    <h1 class="allRealm">Reinos</h1>
+    <div class="cardBody">
+      <div class="card" *ngFor="let realm of filteredRealms">
+        <p class="allName">Reino {{realm.name}}</p>
+        <img class="allimg" [src]="realm.image" [alt]="'imagen del reino ' + realm.name">
+        <button class="edit" [routerLink]="'/realm/edit/'+ realm.id">Editar</button>
+        <button class="detail" [routerLink]="'/realm/detail/'+ realm.id">Ver detalles</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mostrar mensaje si no se encontraron reinos (solo si hay búsqueda activa) -->
+  <ng-template #noRealmResults>
+    <h1 class="allRealm" *ngIf="searchTerm">Reinos</h1>
+    <p class="no-result" *ngIf="searchTerm">No se encontraron reinos con "{{searchTerm}}".</p>
+  </ng-template>
+
+  <!-- Mostrar Personajes -->
+  <div *ngIf="filteredCharacters.length > 0 else noCharacterResults">
+    <h1 class="allCharacter">Personajes</h1>
+    <div class="char-body">
+      <div class="char-card" *ngFor="let character of filteredCharacters">
+        <h2 class="character-name">{{ character.name }}</h2>
+        <img class="character-image" [src]="character.image" [alt]="'Imagen de personaje ' + character.name">
+        <p class="character-realm">Reino: {{ character.realms?.name || 'Sin reino' }}</p>
+        <button class="edit" [routerLink]="'/character/edit/'+ character.id">Editar</button>
+        <button class="detail" [routerLink]="'/character/detail/'+ character.id">Ver detalles</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mostrar mensaje si no se encontraron personajes (solo si hay búsqueda activa) -->
+  <ng-template #noCharacterResults>
+    <h1 class="allCharacter" *ngIf="searchTerm">Personajes</h1>
+    <p class="no-result" *ngIf="searchTerm">No se encontraron personajes con "{{searchTerm}}".</p>
+  </ng-template>
+</div>

@@ -27,35 +27,33 @@ export class CreateComponent implements OnInit {
 
   constructor(
     private realmService: RealmService,
-     private fb: FormBuilder,
-     private router: Router
-    ) {
+    private fb: FormBuilder,
+    private router: Router
+  ) {
     this.createForm = this.fb.group({
-      //declaración de propiedades, valores iniciales, validadores.
-      //propiedad: [ valorinicial, Validaciones]
       name: ['', Validators.required],
-      //image: [Constants.IMG]
-      image: ['', [Validators.pattern(/(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|jpeg|png|gif)/)]]
-    })
+      image: ['', [this.validarImagen]]
+    });
   }
-
   
   ngOnInit(): void {
   }
-  
-  save() {
-    this.createForm.markAllAsTouched();
-    if (this.createForm.invalid) return;
+
+    save() {
+      this.createForm.markAllAsTouched();
+      if (this.createForm.invalid) return;
     
-    if (!this.createForm.value.image) {
-      this.createForm.patchValue({ image: this.defaultImage });
+      if (!this.createForm.value.image) {
+        this.createForm.patchValue({ image: this.defaultImage });
+      }
+    
+      this.realmService.create(this.createForm.value)
+        .then(() => this.router.navigate(['/realm/all']))
+        .catch(error => console.error('Error al crear el reino:', error));
     }
     
-    this.realmService.create(this.createForm.value)
-    .then(() => this.router.navigate(['/realm/all']))
-    .catch(error => console.error('Error al crear el reino:', error));
-  }
   
+    /* GUARDAR IMAGENES Y MAX DE TAMAÑO */
   onFileSelected(event: Event) {
     const file = (event.target as HTMLInputElement).files?.[0];
     if (!file) return;
@@ -72,4 +70,16 @@ export class CreateComponent implements OnInit {
     };
     reader.readAsDataURL(file);
   }
+
+  /* VALIDAR IMAGEN */
+  validarImagen(control: any) {
+    const urlPattern = /^(http|https):\/\/.*\.(jpg|jpeg|png|gif|webp)(\?.*)?$|^(http|https):\/\/.*$/i;
+    const base64Pattern = /^data:image\/(png|jpg|jpeg|gif|webp);base64,/;
+  
+    if (!control.value || urlPattern.test(control.value) || base64Pattern.test(control.value)) {
+      return null; // ✅ Es válida
+    }
+    return { invalidImage: true }; // ❌ No es válida
+  }
+  
 }

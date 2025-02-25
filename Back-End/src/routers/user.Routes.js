@@ -37,9 +37,7 @@ router.get('/', async (req, res) => {
   });
   
 
-
 /*  /user */
-
 //registro
 router.post('/register', sessionCheckLogin, registerValidator, register);
 //login

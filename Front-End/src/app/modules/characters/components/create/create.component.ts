@@ -39,8 +39,7 @@ export class CreateComponent {
   ) {
     this.createForm = this.fb.group({
       name: ['', Validators.required],
-      //image: [Constants.IMG],
-      image: ['', [Validators.pattern(/(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|jpeg|png|gif)/)]], // Validar URL
+      image: ['', [this.validarImagen]],
       realm: [null, Validators.required],
       power: [null, [Validators.required, Validators.min(1)]], // No puede ser 0
       element: [null, Validators.required],
@@ -102,6 +101,17 @@ onFileSelected(event: Event) {
     this.createForm.patchValue({ image: this.imagePreview }); // Guardar en el formulario
   };
   reader.readAsDataURL(file);
+}
+
+ /* VALIDAR IMAGEN */
+ validarImagen(control: any) {
+  const urlPattern = /^(http|https):\/\/.*\.(jpg|jpeg|png|gif|webp)(\?.*)?$|^(http|https):\/\/.*$/i;
+  const base64Pattern = /^data:image\/(png|jpg|jpeg|gif|webp);base64,/;
+
+  if (!control.value || urlPattern.test(control.value) || base64Pattern.test(control.value)) {
+    return null; // ✅ Es válida
+  }
+  return { invalidImage: true }; // ❌ No es válida
 }
 
 }
