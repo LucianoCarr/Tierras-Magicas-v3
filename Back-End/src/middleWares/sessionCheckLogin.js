@@ -1,7 +1,6 @@
 module.exports = (req, res, next) => {
-    if (!req.session.userLogin) {
-        return res.redirect('/user/login'); // Si no está logueado, redirige a login
-    } else {
-        return res.redirect('/'); // Si está logueado, redirige a la vista principal
+    if (req.session.userLogin) {
+        return res.status(400).json({ message: "Ya estás logueado" });
     }
-}
+    next(); // Si no está logueado, permite acceso a login/register
+};

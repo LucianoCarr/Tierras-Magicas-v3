@@ -1,26 +1,27 @@
-const db = require('../../database/models');
+const db = require("../../database/models");
+const { compareSync } = require("bcryptjs");
 
-const loginUser = async (email, password) => {
+module.exports = async (email, password) => {
     try {
         const user = await db.User.findOne({ where: { email } });
 
         if (!user) {
-            throw { status: 404, message: 'Usuario no encontrado' };
+            throw { status: 404, message: "Usuario no encontrado" };
         }
 
-        // Aquí podrías agregar la validación de la contraseña si fuera necesario
-        // Por ejemplo, usando bcrypt para comparar las contraseñas hasheadas
-        if (user.password !== password) {
-            throw { status: 401, message: 'Contraseña incorrecta' };
+        const isPasswordValid = compareSync(password, user.password);
+
+        if (!isPasswordValid) {
+            throw { status: 400, message: "Contraseña incorrecta" };
         }
 
         return user;
+
     } catch (error) {
+        console.log(error);
         throw {
             status: error.status || 500,
-            message: error.message || "Error en el servicio",
+            message: error.message || "ERROR en el servicio de login"
         };
     }
 };
-
-module.exports = { loginUser };

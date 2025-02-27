@@ -1,0 +1,17 @@
+<div class="profile-container">
+    <div class="profile-box">
+      <h2 class="tittleProfile">Perfil</h2>
+      <form>
+        <div class="input-group">
+          <input type="text" [value]="user?.firstName" formControlName="userName" readonly />
+        </div>
+        <div class="input-group">
+          <input type="text" [value]="user?.lastName" formControlName="lastName" readonly />
+        </div>
+        <div class="input-group">
+          <input type="email" [value]="user?.email" formControlName="email" readonly />
+        </div>
+        <button type="button" class="logout-btn" (click)="logout()">Cerrar sesión</button>
+      </form>
+    </div>
+  </div>

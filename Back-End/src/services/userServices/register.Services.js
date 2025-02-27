@@ -1,16 +1,15 @@
-const db = require('../../database/models')
+const db = require('../../database/models');
+const { hashSync } = require('bcryptjs');
 
-const createUser = async (userData) => {
+module.exports = async (userData) => {
     try {
-        const { name, lastName, email, password, birthday, province } = userData;
-        
+        const { name, lastName, email, password } = userData;
+
         const user = await db.User.create({
-            name ,
+            name,
             lastName,
             email,
-            password,
-            birthday,
-            province: null
+            password: hashSync(password, 10),
         });
 
         return user;

@@ -44,11 +44,11 @@ module.exports = [
     max: 12,
   })
   .withMessage('La contraseña debe requerir al menos 6 caracteres'),
-  body('password2')
+/*   body('password2')
     .custom((value,{req}) => {
         if(value !== req.body.password){
             return false
         }
         return true
-    }).withMessage('Las contraseñas no coinciden')
+    }).withMessage('Las contraseñas no coinciden') */
 ];

@@ -14,10 +14,8 @@ Mostrar datos de Reinos\
 Vista de registro y login de usuarios\
 Autenticacion y Autorizacion\
 Validaciones de front\
-Buscador de Reinos y Personajes\
+Buscador de Reinos y Personajes  
 
 
-//VER siguiente clase Autenticacion y Autorizacion (registo y login)<br/>
+//Autenticacion y Autorizacion (registo y login)<br/>
 //Validaciones<br/>
-//imagenes CRUD<br/>
-//Buscador de personajes y reinos

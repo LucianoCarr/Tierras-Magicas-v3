@@ -1,6 +1,5 @@
 const db = require("../../database/models");
 const { validationResult } = require("express-validator");
-
 const createUser = require("../../services/userServices/register.Services");
 
 module.exports = async (req, res) => {
@@ -8,15 +7,13 @@ module.exports = async (req, res) => {
     const errors = validationResult(req);
 
     if (errors.isEmpty()) {
-        const { name, lastName, email, password, birthday, province } = req.body;
+        const { name, lastName, email, password  } = req.body;
 
         const userData = {
             name,
             lastName,
             email,
-            password,
-            birthday: null,
-            province: null
+            password
         };
 
         const newUser = await createUser(userData);

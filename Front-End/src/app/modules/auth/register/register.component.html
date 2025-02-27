@@ -1,1 +1,27 @@
-<p>register works!</p>
+<div class="login-container">
+    <div class="login-box">
+      <h2 class="tittleLog">Registrarse</h2>
+      <form>
+        <div class="input-group">
+            <input type="text" placeholder="Nombre" formControlName="userName" required />
+          </div>
+          <div class="input-group">
+            <input type="text" placeholder="Apellido" formControlName="lastName" required />
+          </div>
+        <div class="input-group">
+          <input type="email" placeholder="Email" formControlName="email" required />
+        </div>
+        <div class="input-group">
+          <input id="floatingPassword" type="password" placeholder="Password" formControlName="password" required />
+          <span id="showPass" (click)="mostrarPassword()" class="password-toggle">👁️</span>
+        </div>
+        <button type="submit" class="login-btn">REGISTRARSE</button>
+      </form>
+      <div class="button-Routes">
+        <a href="user/login" class="forgot-password">• Volver al Login</a>
+      </div>
+    </div>
+  </div>
+  
+  
+  

@@ -1,0 +1,94 @@
+.tittleLog {
+    font-size: 26px;
+    text-decoration: underline;
+    font-family: math;
+  }
+  
+  body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(to right, #4b5563, #6b7280);
+    }
+    
+    .login-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+    
+    .login-box {
+     /*  background: #2d2f36; */
+     background: darkcyan;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      width: 320px;
+      margin: 10px 0px;
+    }
+    
+    h2 {
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+    
+    .input-group {
+      display: flex;
+      align-items: center;
+      background: #fff;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      border-radius: 5px;
+    }
+    
+    .input-group .icon {
+      margin-right: 10px;
+    }
+    
+    input {
+      border: none;
+      outline: none;
+      flex: 1;
+      font-size: 1rem;
+    }
+    
+    .login-btn {
+      width: 100%;
+      padding: 0.7rem;
+      border: none;
+      /* background: linear-gradient(to right, #06beb6, #48b1bf); */
+      background: linear-gradient(to right, rgb(13, 13, 156), black);
+      color: white;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    
+    .login-btn:hover {
+      /* background: linear-gradient(to right, #48b1bf, #06beb6); */
+      background: linear-gradient(to right, black, rgb(13, 13, 156));
+    }
+    
+    .forgot-password {
+      display: block;
+      margin-top: 10px;
+     /*  color: #06beb6; */
+     color: whitesmoke;
+      text-decoration: none;
+    }
+    
+    .forgot-password:hover {
+      text-decoration: underline;
+    }
+  
+    #showPass {
+      cursor: pointer;
+    }
+  
+    .button-Routes {
+      padding-top: 30px;
+    }

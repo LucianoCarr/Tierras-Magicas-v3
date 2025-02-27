@@ -1,27 +1,23 @@
-<main class="form-signin w-100 m-auto py-5">
-    <form (ngSubmit)="onLogin()" [formGroup]="loginForm">
-      
-      <div class="form-floating my-2">
-        <input type="email" class="form-control formInp" id="floatingInput" placeholder="Nombre de usuario" formControlName="username" [class.is-invalid]="loginForm.controls['username'].errors && loginForm.controls['username'].touched">
-        <label for="floatingInput">Nombre de usuario</label>
-        
+<div class="login-container">
+  <div class="login-box">
+    <h2 class="tittleLog">Login</h2>
+    <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+      <div class="input-group">
+        <span class="icon">👤</span>
+        <input type="email" placeholder="Email" formControlName="email" required />
       </div>
-      <div class="d-flex form-floating my-2">
-        <input type="password" class="form-control formInp" id="floatingPassword" placeholder="Contraseña" formControlName="password" [class.is-invalid]="loginForm.controls['password'].errors && loginForm.controls['password'].touched">
-        <label for="floatingPassword">Contraseña</label>
-        <button id="show_password"
-        class="input-group-text btn" type="button"
-        (click)="mostrarPassword()"><span id="showPass" class="bi bi-eye-slash"></span></button>
+      <div class="input-group">
+        <span class="icon">🔑</span>
+        <input id="floatingPassword" type="password" placeholder="Password" formControlName="password" required />
+        <span id="showPass" (click)="mostrarPassword()" class="password-toggle">👁️</span>
       </div>
-  
-      <!-- <div class="form-check text-start my-3">
-        <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault">
-        <label class="form-check-label" for="flexCheckDefault">
-          Remember me
-        </label>
-      </div> -->
-      <button class="btn w-100 p-0 m-0 py-2 border-0 my-3 text-uppercase" type="submit">Ingresar</button>
-      
+      <button type="submit" class="login-btn" [disabled]="loginForm.invalid">LOGIN</button>
     </form>
-    <!-- <a routerLink="reset-password" class="text-center">Forgot my password</a> -->
-  </main>
+    <div class="button-Routes">
+      <a href="#" class="forgot-password">• Olvidaste tu contraseña?</a>
+      <a href="user/register" class="forgot-password">• Crea una cuenta</a>
+    </div>
+  </div>
+</div>
+
+

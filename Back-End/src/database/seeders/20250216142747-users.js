@@ -6,8 +6,6 @@ const userStructure = [
     lastName: "Carrizo",
     email: "luciano@gmail.com",
     password: "123123",
-    birthday: "2000-05-22",
-    province: null,
     createdAt : new Date,
     updatedAt : new Date
   }
